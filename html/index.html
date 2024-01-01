@@ -20,18 +20,84 @@
           </div>
           <div class="form-group">
             <label for="email">Email</label><br />
-            <input type="email" name="email" id="email" />
+            <input
+              type="email"
+              name="username"
+              id="username"
+              required
+              name="email"
+              id="email"
+            />
           </div>
 
           <div class="form-group">
             <div class="btn">
-              <a href="otp.html"><button type="submit">send OTP</button></a>
+              <a href="otp.html"
+                ><button type="submit" name="login" id="login">
+                  send OTP
+                </button></a
+              >
             </div>
           </div>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script>
+            $(document).ready(function () {
+              $("#login").click(function (event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+
+                // Get the input values
+                var username = $("#username").val();
+                //var password = $('#password').val();
+
+                // Create the data object
+                var data = {
+                  email: username,
+                  //password: password
+                };
+
+                // Send the AJAX request
+                $.ajax({
+                  type: "POST",
+                  url: "/api/login",
+                  data: JSON.stringify(data),
+                  contentType: "application/json",
+                  success: function (response) {
+                    // Handle the successful response
+                    //console.log("success");
+                    if (response.redirect_url) {
+                      // Redirect the user to the specified URL
+                      var redirectUrl =
+                        "/verify/?email=" + encodeURIComponent(username);
+                      window.location.href = redirectUrl;
+                    } else {
+                      // Perform any other actions for a successful login
+                      window.location.href = "/home";
+                      console.log("Login successful");
+                    }
+                    // Redirect the user to a new page or perform any other actions
+                  },
+                  error: function (error) {
+                    // Handle the error response
+                    if (error.responseJSON && error.responseJSON.message) {
+                      // Display the error message in the HTML page
+                      $("#error-message").text(error.responseJSON);
+                    } else {
+                      $("#error-message").text(
+                        "An error occurred. Please try again."
+                      );
+                    }
+                  },
+                });
+              });
+            });
+          </script>
+
           <div class="form-group">
             <div class="external-link">
               <div class="signup">
-                <p>Not Registered ? <a href="signup.html">Register</a></p>
+                <p>
+                  Not Registered ? <a id="signup" href="/signup">Register</a>
+                </p>
               </div>
             </div>
           </div>
@@ -43,7 +109,9 @@
           <!-- SIGN IN WITH Google -->
           <div class="google">
             <p>Login with Google</p>
-            <a href="#GOOGLE LOGIN"
+            <a
+              href="{% url 'social:begin' 'google-oauth2' %}"
+              class="google-signin-btn"
               ><img src="/img/google.png" alt="google-login"
             /></a>
           </div>
