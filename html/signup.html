@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Zotic</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="heading">
+          <h1>Game Zotic</h1>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="login-box">
+          <div class="form-title">
+            <h1>Sign Up</h1>
+          </div>
+          <div class="form-group">
+
+
+            <!-- NAME  -->
+            <label for="name">Name</label><br />
+            <input type="text" required name="name" id="name" /><br /><br />
+
+
+            <!-- NUMBER  -->
+            <label for="number">Phone Number</label><br />
+            <input
+              type="number"
+              required
+              name="number"
+              id="number"
+              oninput="javascript: if
+            (this.value.length > this.maxLength) this.value =
+            this.value.slice(0, this.maxLength);"
+              maxlength="10"
+            /><br /><br />
+
+
+            <!-- EMAIL  -->
+            <label for="email">Email</label><br />
+            <input
+              type="email"
+              name="username"
+              id="username"
+              required
+              name="email"
+              id="email"
+            />
+          </div>
+
+          <!-- OTP  -->
+          <div class="form-group">
+            <div class="btn">
+                <button type="submit" name="login" id="login">
+                  send OTP
+                </button>
+            </div>
+          </div>
+
+
+          <!-- ALREADY Registered -->
+          <div class="form-group">
+            <div class="external-link">
+              <div class="signup">
+                <p>
+                  Already Registered ?<a id="signup" href="/signup"> Login</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+
+          <!-- Sign In with GOOGLE  -->
+          <div class="google">
+            <p>Sign Up with Google</p>
+            <a
+              href="{% url 'social:begin' 'google-oauth2' %}"
+              class="google-signin-btn"
+              ><img src="/img/google.png" alt="google-login"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="box3">
+        <div class="footer">
+          <p>&copy Copyright | <span>Nuvion Technologies</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

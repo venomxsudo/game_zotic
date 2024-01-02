@@ -1,5 +1,199 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900|Montserrat:300,400,500,700,900");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+body {
+  background-color: #000;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas:
+    "box"
+    "box2"
+    "box3";
+  background: url(/img/ball-blur.png) no-repeat;
+  background-size: contain;
+  height: 100vh;
+}
+
+.box {
+  grid-area: box;
+}
+
+.box2 {
+  grid-area: box2;
+  width: 40%;
+  border-radius: 40px;
+  background-color: #4341415c;
+  backdrop-filter: grayscale(100%) blur(4px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box3 {
+  grid-area: box3;
+}
+
+.heading h1 {
+  padding: 30px 0 5px 60px;
+  color: white;
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-family: "Montserrat";
+}
+
+.box2 .login-box {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-box h1 {
+  color: white;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}
+.login-box .form-title {
+  margin-bottom: 30px;
+}
+.login-box .form-group {
+  width: 70%;
+  margin: 10px 0;
+}
+input {
+  background-color: transparent;
+  outline: none;
+  font-size: 22px;
+  padding: 8px;
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+  border: white 1px solid;
+  margin: 5px 0;
+  transition: all 0.4s ease;
+}
+input:focus {
+  border: solid 1px red;
+  background-color: #00000045;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-group label {
+  font-size: 20px;
+  color: white;
+}
+.checkbox {
+  margin: 7px 0;
+  width: 70%;
+}
+.checkbox .form-group {
+  width: 100%;
+}
+.checkbox .form-group label {
+  font-size: 15px;
+}
+.btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.btn button {
+  background-color: red;
+  width: 30%;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.5s ease-out;
+}
+.btn button:hover {
+  background-color: rgb(199, 0, 0);
+  cursor: pointer;
+}
+.btn button:active {
+  transform: scale(0.9);
+}
+.external-link {
+  text-align: center;
+  color: white;
+}
+.external-link a {
+  color: rgb(88, 163, 255);
+  text-decoration: none;
+}
+.external-link .forgot {
+  margin: 10px 0 10px 0;
+}
+.external-link .signup {
+  margin: 10px 0 10px 0;
+}
+.google p {
+  color: white;
+}
+.google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+.google img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  filter: contrast(0);
+}
+.google img:hover {
+  filter: contrast(100%);
+  transition: all 0.6s ease;
+}
+hr {
+  border: solid 1px white;
+  width: 50%;
+}
+.box3 .footer {
+  position: fixed;
+  text-align: right;
+  color: white;
+  font-size: 15px;
+  padding: 5px 10px 0px 0px;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 30px;
+  background-color: transparent;
+}
+p span {
+  color: rgb(210, 0, 0);
+  font-size: 15px;
+  font-weight: 700;
+}
+@media (min-height: 300px) and (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas:
+      "box"
+      "box2"
+      "box3";
+    transition: all 0.2s ease;
+  }
+}
+
+@media (max-width:400px){
+    .container{
+    }
+}
