@@ -7,124 +7,183 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <div class="background">
-      <div class="heading">
-        <h1>Game Zotic</h1>
-      </div>
-      <div class="box">
-        <!-- LOGIN FORM STARTS HERE -->
+    <div class="mobileLogin" id="mobileLogin">
+      <div class="background">
+        <div class="heading">
+          <h1>Game Zotic</h1>
+        </div>
+        <div class="box">
+          <!-- LOGIN FORM STARTS HERE -->
 
-        <div class="login-box">
-          <div class="form-title">
-            <h1>Log in</h1>
-          </div>
-          <div class="form-group">
-            <label for="phone_number">Mobile</label><br />
-            <input
-              type="number"
-              name="phone_number"
-              id="phone_number"
-              required
-              oninput="javascript: if
+          <div class="login-box">
+            <div class="form-title">
+              <h1>Log in</h1>
+            </div>
+            <div class="form-group">
+              <label for="phone_number">Mobile</label><br />
+              <input
+                type="number"
+                name="phone_number"
+                id="phone_number"
+                required
+                oninput="javascript: if
             (this.value.length > this.maxLength) this.value =
             this.value.slice(0, this.maxLength);"
-              maxlength="10"
-            />
-          </div>
-
-          <div class="form-group">
-            <div class="btn">
-              <a href="otp.html"
-                ><button type="submit" name="login" id="login">
-                  Continue
-                </button></a
-              >
+                maxlength="10"
+              />
             </div>
-          </div>
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <script>
-            $(document).ready(function () {
-              $("#login").click(function (event) {
-                event.preventDefault(); // Prevent the default form submission behavior
 
-                // Get the input values
-                var username = $("#username").val();
-                //var password = $('#password').val();
+            <div class="form-group">
+              <div class="btn">
+                <a href="/html/otp.html"
+                  ><button type="submit" name="login" id="login">
+                    Continue
+                  </button></a>
+              </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+              $(document).ready(function () {
+                $("#login").click(function (event) {
+                  event.preventDefault(); // Prevent the default form submission behavior
 
-                // Create the data object
-                var data = {
-                  email: username,
-                  //password: password
-                };
+                  // Get the input values
+                  var username = $("#username").val();
+                  //var password = $('#password').val();
 
-                // Send the AJAX request
-                $.ajax({
-                  type: "POST",
-                  url: "/api/login",
-                  data: JSON.stringify(data),
-                  contentType: "application/json",
-                  success: function (response) {
-                    // Handle the successful response
-                    //console.log("success");
-                    if (response.redirect_url) {
-                      // Redirect the user to the specified URL
-                      var redirectUrl =
-                        "/verify/?email=" + encodeURIComponent(username);
-                      window.location.href = redirectUrl;
-                    } else {
-                      // Perform any other actions for a successful login
-                      window.location.href = "/home";
-                      console.log("Login successful");
-                    }
-                    // Redirect the user to a new page or perform any other actions
-                  },
-                  error: function (error) {
-                    // Handle the error response
-                    if (error.responseJSON && error.responseJSON.message) {
-                      // Display the error message in the HTML page
-                      $("#error-message").text(error.responseJSON);
-                    } else {
-                      $("#error-message").text(
-                        "An error occurred. Please try again."
-                      );
-                    }
-                  },
+                  // Create the data object
+                  var data = {
+                    email: username,
+                    //password: password
+                  };
+
+                  // Send the AJAX request
+                  $.ajax({
+                    type: "POST",
+                    url: "/api/login",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    success: function (response) {
+                      // Handle the successful response
+                      //console.log("success");
+                      if (response.redirect_url) {
+                        // Redirect the user to the specified URL
+                        var redirectUrl =
+                          "/verify/?email=" + encodeURIComponent(username);
+                        window.location.href = redirectUrl;
+                      } else {
+                        // Perform any other actions for a successful login
+                        window.location.href = "/home";
+                        console.log("Login successful");
+                      }
+                      // Redirect the user to a new page or perform any other actions
+                    },
+                    error: function (error) {
+                      // Handle the error response
+                      if (error.responseJSON && error.responseJSON.message) {
+                        // Display the error message in the HTML page
+                        $("#error-message").text(error.responseJSON);
+                      } else {
+                        $("#error-message").text(
+                          "An error occurred. Please try again."
+                        );
+                      }
+                    },
+                  });
                 });
               });
-            });
-          </script>
+            </script>
 
-          <!-- LOGIN FORM ENDS HERE -->
+            <!-- LOGIN FORM ENDS HERE -->
 
-          <hr>
-<div class="external">
-          <!-- SIGN IN WITH Google -->
-          <div class="google-btn">
-            <button>
-            <div class="google-icon-wrapper">
-              <img class="google-icon" src="/img/google.png"/>
+            <hr />
+            <div class="external">
+              <!-- SIGN IN WITH Google -->
+              <div class="google-btn">
+                <button>
+                  <div class="google-icon-wrapper">
+                    <img class="google-icon" src="/img/google.png" />
+                  </div>
+                  <p class="btn-text">Continue with google</p>
+                </button>
+              </div>
+
+              <div class="email-btn">
+                <button onclick="emailpopup()">
+                  <div class="google-icon-wrapper">
+                    <img class="google-icon" src="/img/email.png" />
+                  </div>
+                  <p class="btn-text">Continue with Email</p>
+                </button>
+              </div>
             </div>
-            <p class="btn-text">Continue with google</p>
-            </button>
           </div>
-
-          <!-- SIGN IN WITH EMAIL  -->
-          <div class="email-btn">
-            <button>
-            <div class="google-icon-wrapper">
-              <img class="google-icon" src="/img/email.png"/>
-            </div>
-            <p class="btn-text">Continue with Email</p>
-            </button>
-          </div>
-</div>
-
-          <!-- SING IN WITH google END -->
+        </div>
+        <div class="footer">
+          <p>&copy Copyright | <span>Nuvion Technologies</span></p>
         </div>
       </div>
-      <div class="footer">
-        <p>&copy Copyright | <span>Nuvion Technologies</span></p>
+    </div>
+
+
+<!-- --------------------------------------------------
+
+EMAIL LOGIN STARTS
+
+-------------------------------------------------- -->
+
+
+    <div class="emailLogin" id="emailLogin">
+      <div class="background">
+        <div class="heading">
+          <h1>Game Zotic</h1>
+        </div>
+        <div class="box">
+
+
+          <!-- LOGIN FORM STARTS HERE -->
+          <div class="login-box">
+            <div class="form-title">
+              <h1>Log in</h1>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label><br />
+              <input type="email" name="email" id="email" required />
+            </div>
+
+            <!-- BUTTON FOR OTP SENT REQUEST  -->
+            <div class="form-group">
+              <div class="btn">
+                <a href="otp.html"
+                  ><button type="submit" name="login" id="login">
+                    Continue
+                  </button></a>
+              </div>
+            </div>
+
+
+
+            <div class="text-wrapper">
+              <p onclick="mobile()">Click to Continue with mobile instead..</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <p>&copy Copyright | <span>Nuvion Technologies</span></p>
+        </div>
       </div>
     </div>
   </body>
+  <script>
+      var emailPopup = document.getElementById("emailLogin");
+      var mobilePopup = document.getElementById('mobileLogin');
+    function emailpopup() {
+      emailPopup.style.display = "block";
+      mobilePopup.style.display='none';
+    }
+    function mobile(){
+      emailPopup.style.display = "none";
+      mobilePopup.style.display='block';
+    }
+  </script>
 </html>
