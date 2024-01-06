@@ -9,15 +9,14 @@ body {
   background-color: #000;
 }
 .background{
-  background: url(/img/ball-blur.png) no-repeat;
-  background-size: contain;
+  background: linear-gradient(to bottom,rgb(151, 44, 44),rgb(0, 0, 0));
   height: 100vh;
 }
 .heading h1{
   padding: 30px 0 5px 60px;
   color:white;
   letter-spacing: 3px;
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'Montserrat';
 }
 .box {
@@ -27,8 +26,8 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 40px;
-  background-color: #4341415c;
-  backdrop-filter: grayscale(100%) blur(4px);
+  background-color: #43414150;
+  box-shadow: 0px 0px 10px 0px white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -55,13 +54,13 @@ body {
   width: 70%;
   margin: 10px 0;
 }
-input[type="email"]{
+input[type="number"]{
   background-color: transparent;
   outline: none;
   font-size: 22px;
   padding: 8px;
   border-radius: 10px;
-  width: 100%;
+  width: 99%;
   color: white;
   border: white 1px solid;
   margin: 5px 0;
@@ -70,6 +69,11 @@ input[type="email"]{
 input:focus {
   border: solid 1px red;
   background-color: #00000045;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .form-group label {
   font-size: 20px;
@@ -109,44 +113,55 @@ input:focus {
 .btn button:active {
   transform: scale(0.9);
 }
-.external-link {
-  text-align: center;
-  color: white;
+.external{
+  margin: 20px;
 }
-.external-link a {
-  color: rgb(88, 163, 255);
-  text-decoration: none;
+.google-btn button,.email-btn button{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  width: inherit;
 }
-.external-link .forgot {
-  margin: 10px 0 10px 0;
+.google-btn,.email-btn {
+  width: 250px;
+  height: 50px;
+  /* background-color: rgba(255, 255, 255, 0.261); */
+  border-radius: 100px;
+  box-shadow: 0 4px 6px 3px rgba(0,0,0,.25);
+  margin: 15px 0 15px 0;
+  transition: all 0.3s ease;
 }
-.external-link .signup {
-  margin: 10px 0 10px 0;
-}
-.google p{
-  color: white;
-
-}
-.google{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0 10px 0;
-
-}
-.google img{
-  width: 50px;
-  height: 50px;  
-  margin-left: 10px;
-  filter: contrast(0);
-}
-.google img:hover {
-  filter: contrast(100%);
-  transition: all 0.6s ease;
-}
+.google-icon-wrapper {
+    position: absolute;
+  }
+  .google-icon {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+  }
+  .btn-text {
+    float: right;
+    margin: 11px 10px;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+  .google-btn:hover{
+    background-color: rgba(255, 86, 86, 0.197);
+    cursor: pointer;
+  }
+  .email-btn:hover{
+    background-color: rgba(255, 255, 255, 0.269);
+    cursor: pointer;
+  }
 hr{
   border: solid 1px white;
   width: 50%;
+  margin: 10px;
 }
 .footer{
   position: fixed;
@@ -166,5 +181,128 @@ p span{
 }
 
 /* responsive */
+/* Mobile Phones */
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .login-box {
+    width: 90%;
+  }
+
+  .form-group {
+    width: 90%;
+  }
+
+  .checkbox {
+    width: 90%;
+  }
+
+  .btn button {
+    width: 110%;
+  }
+
+  hr {
+    width: 70%;
+  }
+}
+
+/* Small Tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .box {
+    width: 70%;
+  }
+
+  .login-box {
+    width: 80%;
+  }
+
+  .form-group {
+    width: 80%;
+  }
+
+  .checkbox {
+    width: 80%;
+  }
+
+  .btn button {
+    width: 110%;
+  }
+
+  hr {
+    width: 60%;
+  }
+}
+
+/* Large Tablets and Small Desktops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  .box {
+    width: 60%;
+  }
+
+  .login-box {
+    width: 70%;
+  }
+
+  .form-group {
+    width: 70%;
+  }
+
+  .checkbox {
+    width: 70%;
+  }
+
+  .btn button {
+    width: 110%;
+  }
+
+  hr {
+    width: 50%;
+  }
+}
+
+/* Larger Screens */
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 20px;
+  }
+
+  .box {
+    width: 40%;
+  }
+
+  .login-box {
+    width: 50%;
+  }
+
+  .form-group {
+    width: 60%;
+  }
+
+  .checkbox {
+    width: 60%;
+  }
+
+  .btn button {
+    width:200px;
+  }
+
+  hr {
+    width: 40%;
+  }
+}
 
 

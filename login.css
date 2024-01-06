@@ -64,3 +64,15 @@ body {
   .wrapper a:hover:after{
     width: 100%;
   }
+
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px white solid;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px white;
+    background-color: rgba(255, 255, 255, 0.337);
+}

@@ -19,14 +19,16 @@
             <h1>Log in</h1>
           </div>
           <div class="form-group">
-            <label for="email">Email</label><br />
+            <label for="phone_number">Mobile</label><br />
             <input
-              type="email"
-              name="username"
-              id="username"
+              type="number"
+              name="phone_number"
+              id="phone_number"
               required
-              name="email"
-              id="email"
+              oninput="javascript: if
+            (this.value.length > this.maxLength) this.value =
+            this.value.slice(0, this.maxLength);"
+              maxlength="10"
             />
           </div>
 
@@ -34,7 +36,7 @@
             <div class="btn">
               <a href="otp.html"
                 ><button type="submit" name="login" id="login">
-                  send OTP
+                  Continue
                 </button></a
               >
             </div>
@@ -92,29 +94,31 @@
             });
           </script>
 
-          <div class="form-group">
-            <div class="external-link">
-              <div class="signup">
-                <p>
-                  Not Registered ? <a id="signup" href="/html/signup.html">Register</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
           <!-- LOGIN FORM ENDS HERE -->
 
-          <hr />
-
+          <hr>
+<div class="external">
           <!-- SIGN IN WITH Google -->
-          <div class="google">
-            <p>Login with Google</p>
-            <a
-              href="{% url 'social:begin' 'google-oauth2' %}"
-              class="google-signin-btn"
-              ><img src="/img/google.png" alt="google-login"
-            /></a>
+          <div class="google-btn">
+            <button>
+            <div class="google-icon-wrapper">
+              <img class="google-icon" src="/img/google.png"/>
+            </div>
+            <p class="btn-text">Continue with google</p>
+            </button>
           </div>
+
+          <!-- SIGN IN WITH EMAIL  -->
+          <div class="email-btn">
+            <button>
+            <div class="google-icon-wrapper">
+              <img class="google-icon" src="/img/email.png"/>
+            </div>
+            <p class="btn-text">Continue with Email</p>
+            </button>
+          </div>
+</div>
+
           <!-- SING IN WITH google END -->
         </div>
       </div>
