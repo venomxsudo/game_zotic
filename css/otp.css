@@ -8,10 +8,6 @@
 body {
   background-color: #000;
 }
-.background{
-  background: linear-gradient(to bottom,rgb(151, 44, 44),rgb(0, 0, 0));
-  height: 100vh;
-}
 .heading h1{
   padding: 30px 0 5px 60px;
   color:white;
