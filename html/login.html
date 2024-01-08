@@ -6,6 +6,8 @@
     <title>Game Zotic</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/animation.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </head>
   <body>
     <div class="area" >
@@ -54,7 +56,7 @@
             </div>
 
             <div class="form-group">
-              <div class="btn">
+              <div class="login-button">
                 <a href="/html/otp.html"
                   ><button type="submit" name="login" id="login">
                     Continue
@@ -120,23 +122,23 @@
             <div class="external">
               <!-- SIGN IN WITH Google -->
               <div class="google-btn">
-                <button>
-                  <div class="google-icon-wrapper">
-                    <img class="google-icon" src="/img/google.png" />
-                  </div>
-                  <p class="btn-text">Continue with google</p>
-                </button>
+                  <button>
+                      <div class="google-icon-wrapper">
+                          <i class="fab fa-google google-icon"></i>
+                      </div>
+                      <p class="btn-text">Continue with Google</p>
+                  </button>
               </div>
-
+          
               <div class="email-btn">
-                <button onclick="emailpopup()">
-                  <div class="google-icon-wrapper">
-                    <img class="google-icon" src="/img/email.png"/>
-                  </div>
-                  <p class="btn-text">Continue with Email</p>
-                </button>
+                  <button onclick="emailpopup()">
+                      <div class="google-icon-wrapper">
+                          <i class="fas fa-envelope  google-icon"></i>
+                      </div>
+                      <p class="btn-text">Continue with Email</p>
+                  </button>
               </div>
-            </div>
+          </div>
           </div>
         </div>
         <div class="footer">
@@ -173,7 +175,7 @@ EMAIL LOGIN STARTS
 
             <!-- BUTTON FOR OTP SENT REQUEST  -->
             <div class="form-group">
-              <div class="btn">
+              <div class="login-button">
                 <a href="otp.html"
                   ><button type="submit" name="login" id="login">
                     Continue

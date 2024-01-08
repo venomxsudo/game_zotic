@@ -4,14 +4,10 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins',Helvetica;
-  transition: 0.3s ease-out;
-}
-body {
-  background-color: #000;
 }
 .heading h1{
   padding: 30px 0 5px 60px;
-  color:white;
+  color:#f1cbc9;
   letter-spacing: 3px;
   font-size: 40px;
   font-family: 'Montserrat';
@@ -23,8 +19,9 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 40px;
-  background-color: #43414150;
-  box-shadow: 0px 0px 10px 0px white;
+  background: #1b1c2c;
+  box-shadow:  11px 11px 16px #12131d,
+               -11px -11px 16px #24253b;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,20 +50,20 @@ body {
   margin: 10px 0;
 }
 input[type="number"],input[type="email"]{
-  background-color: transparent;
   outline: none;
   font-size: 22px;
   padding: 8px;
-  border-radius: 10px;
   width: 99%;
   color: white;
-  border: white 1px solid;
   margin: 5px 0;
   transition: all 0.4s ease;
+  border: none;
+  border-bottom: 1px solid;
+  background-color: transparent;
 }
 input:focus {
-  border: solid 1px red;
   background-color: #00000045;
+  border-radius: 15px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -87,14 +84,13 @@ input::-webkit-inner-spin-button {
 .checkbox .form-group label {
   font-size: 15px;
 }
-.btn {
+.login-button {
   text-align: center;
   display: flex;
   justify-content: center;
   margin: 30px;
 }
-.btn button {
-  background-color: red;
+.login-button button {
   width: 250px;
   height: 40px;
   font-size: 20px;
@@ -102,14 +98,15 @@ input::-webkit-inner-spin-button {
   outline: none;
   border: none;
   border-radius: 10px;
+background: #c26c85;
   transition: all 0.5s ease-out;
 }
-.btn button:hover {
-  background-color: rgb(199, 0, 0);
+.login-button button:hover {
+  background-color: #995568;
   cursor: pointer;
 }
-.btn button:active {
-  transform: scale(0.9);
+.login-button button:active {
+  transform: scale(0.94);
 }
 .external{
   margin: 20px;
@@ -128,40 +125,48 @@ input::-webkit-inner-spin-button {
   width: 250px;
   height: 50px;
   border-radius: 100px;
-  box-shadow: 0 4px 6px 3px rgba(0,0,0,.25);
   margin: 15px 0 15px 0;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  color: #febb75;
+  border-radius: 15px;
+background: linear-gradient(145deg, #1d1e2f, #181928);
+box-shadow:  4px 4px 14px #0b0b12,
+             -4px -4px 14px #2b2d46;
 }
 .google-icon-wrapper {
-    position: absolute;
-  }
-  .google-icon {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    margin: 5px 6px;
-  }
-  .btn-text {
-    float: right;
-    margin: 11px 10px;
-    color: white;
-    font-size: 16px;
-    letter-spacing: 0.2px;
-  }
-  .google-btn:hover{
-    background-color: rgba(255, 86, 86, 0.197);
-    cursor: pointer;
-  }
-  .email-btn:hover{
-    background-color: rgba(255, 255, 255, 0.269);
-    cursor: pointer;
-  }
-  .google-btn:active,.email-btn:active{
-    transform: scale(0.9);
-  }
+  position: absolute;
+}
+
+.google-icon {
+  font-size: 35px;
+  margin: 7px 6px;
+  margin-left: 10px;
+}
+
+.btn-text {
+  float: right;
+  margin: 14px 10px;
+  color: #febb75;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.google-btn:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.email-btn:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.google-btn:active, .email-btn:active {
+  box-shadow: inset 6px 6px 14px #0b0b12,
+  inset -6px -6px 14px #2b2d46;
+}
+
 hr{
-  border: solid 1px white;
-  width: 50%;
+  border: solid 1px rgb(81, 81, 81) !important;
   margin: 10px;
 }
 .footer{
@@ -176,7 +181,7 @@ hr{
   background-color: transparent;
 }
 p span{
-  color: rgb(210, 0, 0);
+  color: #f1cbc9;
   font-size: 15px;
   font-weight: 700;
 }
