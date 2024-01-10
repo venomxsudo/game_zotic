@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Zotic | Unleash your inner Beast</title>
-    <link rel="stylesheet" href="/css/home.css" />
-  </head>
-  <body>
-
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Game Zotic | Let's Play</title>
+</head>
+<body>
+    <div class="navigation">
+      <ul>
+          <li class="list active">
+              <a href="#">
+                  <span class="text">HOME</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="text">ABOUT US</span>
+              </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="text">TURF</span>
+                </a>
+            </li>
+          <li class="list">
+              <a href="#">
+                  <span class="text">CONTACT US</span>
+              </a>
+          </li>
+          <div class="indicator"></div>
+      </ul>
+  </div>
+<!-- partial -->
+<script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
+<script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+    <section id="home">
+        <h1>Unleash Your Inner Beast <br><span>Book Your Turf Now...</span></h1>
+        <div class="ball-img">
+            <img src="ball.png" alt="GameZoo.com">
+        </div>
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary center">Turf Near You</h1>
+        <div id="services">
+            <div class="box">
+                <img src="ball.png" alt="GameZoo.com">
+                <p class="p-secondary">Lions Club, Gota</p>
+                <h3>1200/-</h3>
+                <button class="booknow">Book Now</button>
+            </div>
+            <div class="box">
+                <img src="ball.png" alt="GameZoo.com">
+                <p class="p-secondary">9 Brothers, Navrangpura</p>
+                <h3>1500/-</h3>
+                <button class="booknow">Book Now</button>
+            </div>
+            <div class="box">
+                <img src="ball.png" alt="GameZoo.com">
+                <p class="p-secondary">White Crow, Thaltej</p>
+                <h3>1250/-</h3>
+                <button class="booknow">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <section id="aboutus-container">
+        <h4 class="heading-aboutus1">Game Zoo</h4>
+        <div>
+            <button type="button" class="join-btn">Join</button>
+            <h4 class="heading-aboutus2">About Us</h4>
+            <p class="p-aboutus">Get Your Turf In Our List At Minimal Cost</p>
+        </div>
+        <div id="info-box">
+            <div class="box-group">
+                <h3>Info:</h3>
+                <p><a href="tel:+91 9998887776"><img src="telephone.png" alt="GameZoo.com">Telephone:<br><span>+91
+                            9998887776</span></a></p>
+                <p><a href="mailto:gamezoo@gmail.com"><img src="email.png"
+                            alt="GameZoo.com">E-mail:<br><span>gamezoo@gmail.com</span></a></p>
+                <p><a href="mailto:gamezoo@gmail.com"><img src="pin.png"
+                            alt="GameZoo.com">Direction:<br><span>Ahmedabad</span></a></p>
+            </div>
+        </div>
+    </section>
+</body>
+<script>const list = document.querySelectorAll('.list');
+  function activeLink(){
+      list.forEach((item)=>
+      item.classList.remove('active'));
+      this.classList.add('active');
+  }
+  list.forEach((item) =>
+  item.addEventListener('click',activeLink));</script>
 </html>
