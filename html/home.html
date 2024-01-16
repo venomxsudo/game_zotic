@@ -7,6 +7,7 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/ball.png" />
     <link rel="stylesheet" href="/css/home.css" />
     <title>Game Zotic | Let's Play</title>
   </head>
@@ -19,13 +20,13 @@
           </a>
         </li>
         <li class="list">
-          <a href="#">
-            <span class="text">ABOUT US</span>
+          <a href="#turf" onclick="smoothScroll('turf')">
+            <span class="text">TURF</span>
           </a>
         </li>
         <li class="list">
           <a href="#">
-            <span class="text">TURF</span>
+            <span class="text">ABOUT US</span>
           </a>
         </li>
         <li class="list">
@@ -43,26 +44,32 @@
         </div>
         <h1>Unleash Your Inner Beast <br />Book Your Turf Now...</h1>
     </div>
-    <div id="services-container">
-      <h1 class="h-primary center">Turf Near You</h1>
-      <div id="services">
-        <div class="box">
-          <img src="ball.png" alt="GameZoo.com" />
-          <p class="p-secondary">Lions Club, Gota</p>
-          <h3>1200/-</h3>
-          <button class="booknow">Book Now</button>
+    <div class="turf" id="turf">
+      <h1 class="title">Turf Near You</h1>
+      <div class="turf-card">
+        <div class="card">
+          <img src="/img/123.jpeg" alt="GameZoo.com" />
+          <div class="content">
+            <p class="turf-name">Lions Club, Gota</p>
+            <h3>1200/-</h3>
+            <button class="booknow">Book Now</button>
+          </div>
         </div>
-        <div class="box">
-          <img src="ball.png" alt="GameZoo.com" />
-          <p class="p-secondary">9 Brothers, Navrangpura</p>
-          <h3>1500/-</h3>
-          <button class="booknow">Book Now</button>
+        <div class="card">
+          <img src="/img/123.jpeg" alt="GameZoo.com" />
+          <div class="content">
+            <p class="turf-name">9 Brothers, Navrangpura</p>
+            <h3>1500/-</h3>
+            <button class="booknow">Book Now</button>
+          </div>
         </div>
-        <div class="box">
-          <img src="ball.png" alt="GameZoo.com" />
-          <p class="p-secondary">White Crow, Thaltej</p>
-          <h3>1250/-</h3>
-          <button class="booknow">Book Now</button>
+        <div class="card">
+          <img src="/img/123.jpeg" alt="GameZoo.com" />
+          <div class="content">
+            <p class="turf-name">White Crow, Thaltej</p>
+            <h3>1250/-</h3>
+            <button class="booknow">Book Now</button>
+          </div>
         </div>
       </div>
     </div>
@@ -110,5 +117,10 @@
       this.classList.add("active");
     }
     list.forEach((item) => item.addEventListener("click", activeLink));
+
+    function smoothScroll(targetId) {
+      var targetElement = document.getElementById(targetId);
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
   </script>
 </html>

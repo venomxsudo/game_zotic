@@ -7,80 +7,32 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-:root {
-  --clr: #1b1b2c;
+body{
+  background-color: #1b1b2c;
 }
-body {
-  min-height: 100vh;
-  background: var(--clr);
+.heading h1{
+  color:#f1cbc9;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-family: 'Montserrat';
+  text-align: left;
+  margin: 30px;
 }
-.navigation {
-  width: 100%;
-  height: 70px;
-  margin-top: 40px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-.navigation ul {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-.navigation ul li {
-  position: relative;
-  list-style: none;
-  width: 170px;
-  height: 50px;
-  z-index: 1;
-  display: flex;
-}
-.navigation ul li a {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  font-weight: 500;
-}
-
-.navigation ul li a {
-  text-decoration: none;
-}
-.navigation ul li a .text {
-  font-size: 20px;
-  letter-spacing: 0.05em;
+.footer{
+  position: fixed;
+  text-align: right;
   color: white;
-  transition: all 0.5s ease;
+  font-size: 15px;
+  padding: 5px 10px 0px 0px;
+  bottom: 0;
+  right:0;
+  margin-bottom: 30px;
+  background-color: transparent;
 }
-.navigation ul li.active a .text {
-  font-size: 22px;
-  color: #1b1b2c !important;
-}
-.indicator {
-  position: absolute;
-  width: 170px;
-  height: 50px;
-  background: #febb75;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-
-.navigation ul li:nth-child(1).active ~ .indicator {
-  transform: translateX(calc(170px * 0));
-}
-.navigation ul li:nth-child(2).active ~ .indicator {
-  transform: translateX(calc(170px * 1));
-}
-.navigation ul li:nth-child(3).active ~ .indicator {
-  transform: translateX(calc(170px * 2));
-}
-.navigation ul li:nth-child(4).active ~ .indicator {
-  transform: translateX(calc(170px * 3));
+p span{
+  color: #f1cbc9;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .error-container {
@@ -92,7 +44,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
 }
 .error-container > span {
   display: inline-block;
