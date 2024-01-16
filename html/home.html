@@ -25,7 +25,7 @@
           </a>
         </li>
         <li class="list">
-          <a href="#">
+          <a href="#aboutus">
             <span class="text">ABOUT US</span>
           </a>
         </li>
@@ -39,72 +39,72 @@
     </div>
 
     <div class="main-page">
-        <div class="ball-img">
-            <img src="/img/ball.png" alt="GameZoo.com" />
-        </div>
-        <h1>Unleash Your Inner Beast <br />Book Your Turf Now...</h1>
+      <div class="ball-img">
+        <img src="/img/ball.png" alt="GameZoo.com" id="ball" />
+      </div>
+      <h1>Unleash Your Inner Beast <br />Book Your Turf Now...</h1>
     </div>
     <div class="turf" id="turf">
-      <h1 class="title">Turf Near You</h1>
-      <div class="turf-card">
+      <div class="title">
+        <h1>Turf near you</h1>
+      </div>
+      <div class="cards">
         <div class="card">
-          <img src="/img/123.jpeg" alt="GameZoo.com" />
-          <div class="content">
-            <p class="turf-name">Lions Club, Gota</p>
-            <h3>1200/-</h3>
-            <button class="booknow">Book Now</button>
+          <img src="/img/123.jpeg" alt="Turf Image" />
+          <div class="card-content">
+            <div class="turf-name">Lions Club,Navrangpura</div>
+            <div class="price">1200/-</div>
+            <a href="#" class="book-now-btn">Book Now</a>
           </div>
         </div>
         <div class="card">
-          <img src="/img/123.jpeg" alt="GameZoo.com" />
-          <div class="content">
-            <p class="turf-name">9 Brothers, Navrangpura</p>
-            <h3>1500/-</h3>
-            <button class="booknow">Book Now</button>
+          <img src="/img/123.jpeg" alt="Turf Image" />
+          <div class="card-content">
+            <div class="turf-name">9 Brothers,Gota</div>
+            <div class="price">1300/-</div>
+            <a href="#" class="book-now-btn">Book Now</a>
           </div>
         </div>
         <div class="card">
-          <img src="/img/123.jpeg" alt="GameZoo.com" />
-          <div class="content">
-            <p class="turf-name">White Crow, Thaltej</p>
-            <h3>1250/-</h3>
-            <button class="booknow">Book Now</button>
+          <img src="/img/123.jpeg" alt="Turf Image" />
+          <div class="card-content">
+            <div class="turf-name">Hello World,Gandhinagar</div>
+            <div class="price">1100/-</div>
+            <a href="#" class="book-now-btn">Book Now</a>
           </div>
         </div>
+      </div>
+      <div class="more-link">
+        <a href="#">More Turfs...</a>
       </div>
     </div>
-    <div id="aboutus-container">
-      <h4 class="heading-aboutus1">Game Zoo</h4>
-      <div>
-        <button type="button" class="join-btn">Join</button>
-        <h4 class="heading-aboutus2">About Us</h4>
-        <p class="p-aboutus">Get Your Turf In Our List At Minimal Cost</p>
+
+
+    <div class="aboutus-container" id="aboutus">
+      <header>
+        <h1>About Us</h1>
+      </header>
+      <div class="about-desc">
+      <section>
+        <h2>About GameZotic</h2>
+        <p>
+          GameZotic, created by a group of five college students, is a platform designed to simplify turf bookings near you. Whether you're a sports enthusiast or someone looking for a convenient way to book turfs, GameZotic is here to make the process easy and efficient.
+        </p>
+      </section>
+      
+      <section>
+        <h2>About Nuvion Technologies</h2>
+        <p>
+          Nuvion Technologies is dedicated to providing cutting-edge IT solutions. As the driving force behind GameZotic, our goal is to leverage technology to enhance user experiences and streamline turf booking processes. We are committed to innovation and excellence in the world of information technology.
+        </p>
+      </section>
       </div>
-      <div id="info-box">
-        <div class="box-group">
-          <h3>Info:</h3>
-          <p>
-            <a href="tel:+91 9998887776"
-              ><img
-                src="telephone.png"
-                alt="GameZoo.com"
-              />Telephone:<br /><span>+91 9998887776</span></a
-            >
-          </p>
-          <p>
-            <a href="mailto:gamezoo@gmail.com"
-              ><img src="email.png" alt="GameZoo.com" />E-mail:<br /><span
-                >gamezoo@gmail.com</span
-              ></a
-            >
-          </p>
-          <p>
-            <a href="mailto:gamezoo@gmail.com"
-              ><img src="pin.png" alt="GameZoo.com" />Direction:<br /><span
-                >Ahmedabad</span
-              ></a
-            >
-          </p>
+      <div class="about-city">
+        <h3>Cities We are operating</h3>
+        <div class="city">
+          <p>GANDHINAGAR</p>
+          <p>SURAT</p>
+          <p>AHMEDABAD</p>
         </div>
       </div>
     </div>
@@ -118,9 +118,15 @@
     }
     list.forEach((item) => item.addEventListener("click", activeLink));
 
-    function smoothScroll(targetId) {
-      var targetElement = document.getElementById(targetId);
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+    // smooth scrolling
+    window.onscroll = function () {
+      scrollRotate();
+    };
+
+    function scrollRotate() {
+      let image = document.getElementById("ball");
+      image.style.transform = "rotate(-" + window.pageYOffset / 2 + "deg)";
     }
+
   </script>
 </html>

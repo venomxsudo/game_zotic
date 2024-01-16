@@ -9,18 +9,22 @@
 :root {
   --clr: #1b1b2c;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
   background: var(--clr);
 }
 .navigation {
   width: 100%;
-  height: 70px;
-  margin-top: 40px;
-  position: relative;
+  height: 100px;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #1b1b2c;
+  z-index: 3;
 }
 .navigation ul {
   display: flex;
@@ -89,9 +93,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 20%;
-  margin-top: -50px;
-
+overflow: hidden;
 }
 .main-page h1{
   font-size: 50px;
@@ -99,7 +101,8 @@ body {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-align: right;
-
+  width: 70%;
+  padding-right: 50px;
 }
 .main-page .ball-img{
   width: 400px;
@@ -125,62 +128,163 @@ body {
     transform: scale(1);
   }
 }
-.turf h1{
-  font-size: 40px;
-  color: white;
-  font-weight: 500;
-  text-align: center;
-  margin-top: -20px;
-  margin-bottom: 20px;
-}
 
-.turf-card {
+.turf{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #2a2a44;
+  scroll-margin-top: 100px;
+}
+.title{
+  margin: 50px;
+}
+.title h1{
+  font-size: 50px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .card {
-  position: relative;
-  overflow: hidden;
+  width: 300px;
   border-radius: 8px;
-  box-shadow:  5px 5px 6px #0b0b12,
-             -5px -5px 6px #2b2b46;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  background-color: #8b8bbc;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.02);
 }
 
-.content {
-  position: relative;
-  z-index: 2;
-  color: white;
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
   padding: 20px;
-  text-align: center;
 }
 
 .turf-name {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-h3 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+.price {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 12px;
 }
 
-.booknow {
-  background-color: #c48d35;
-  color: white;
-  padding: 10px 20px;
+.book-now-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #383859;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1em;
-  transition: all 0.3s ease-in-out;
-}
-.booknow:hover {
-  background-color: #ffa81c;
+  transition: background-color 0.3s;
 }
 
-img {
+.book-now-btn:hover {
+  background-color: #2a2a42;
+}
+
+.more-link{
+  text-align: center;
+  margin: 20px;
+}
+.more-link a{
+  text-decoration: none;
+  color: rgb(242, 213, 213);
+  font-size: 20px;
+  margin: 10px;
+  transition: all 0.5s ease;
+}
+.more-link a:hover{
+  color: #febb75;
+}
+
+.aboutus-container{
   width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  scroll-margin-top: 100px;
+}
+
+.aboutus-container h1{
+  font-size: 50px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 50px;
+}
+.aboutus-container .about-desc{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 10px;
+}
+.about-desc section {
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 32px;
+  color: white;
+}
+
+p {
+  line-height: 1.6;
+  color: white;
+}
+.about-city{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.about-city h3{
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 50px;
+  text-align: center;
+}
+.about-city .city{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
