@@ -7,7 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --clr: #1b1b2c;
+  --clr: #1b1c2c;
 }
 html{
   scroll-behavior: smooth;
@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1b1b2c;
+  background-color: #26283e;
   z-index: 3;
 }
 .navigation ul {
@@ -48,21 +48,17 @@ body {
   width: 100%;
   text-align: center;
   font-weight: 500;
-}
-
-.navigation ul li a {
   text-decoration: none;
 }
 .navigation ul li a .text {
   font-size: 20px;
   letter-spacing: 0.05em;
   color: white;
-  transition: all 0.5s ease;
   font-weight: 500;
+  transition: all 0.5s ease;
 }
 .navigation ul li.active a .text {
-  font-size: 22px;
-  color: #febb75;
+  color: #ffbb72;
 }
 
 .burger{
@@ -70,7 +66,7 @@ body {
   position: absolute;
   cursor: pointer;
   right: 3%;
-  top: 15px;
+  top: 20px;
 }
 .line{
   width: 30px;
@@ -91,11 +87,11 @@ overflow: hidden;
 }
 .main-page h1{
   font-size: 50px;
-  color: white;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-align: right;
   width: 70%;
+  color: white;
   padding-right: 50px;
 }
 .main-page .ball-img{
@@ -127,7 +123,7 @@ overflow: hidden;
   left: 50%;
   transform: translateX(-50%);
 }
-.arrow p{ color: white;}
+.arrow p{ color: rgb(255, 182, 182);}
 
 .arrow {
   text-align: center;
@@ -171,7 +167,7 @@ overflow: hidden;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #2a2a44;
+  background-color: #464971;
   scroll-margin-top: 100px;
 }
 .title{
@@ -179,10 +175,10 @@ overflow: hidden;
 }
 .title h1{
   font-size: 50px;
-  color: white;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-align: center;
+  color: white;
 }
 .cards{
   display: flex;
@@ -198,10 +194,11 @@ overflow: hidden;
   width: 300px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  background-color: #8b8bbc;
   transition: transform 0.3s;
+  border-radius: 5px;
+  background: #3b3e64;
+  box-shadow:  1px 1px 4px rgb(0, 0, 0);
 }
 .card:hover {
   transform: scale(1.02);
@@ -221,19 +218,21 @@ overflow: hidden;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  color: #f5f5f5;
 }
 
 .price {
   color: #000;
   font-size: 16px;
   margin-bottom: 12px;
+  color: #f5f5f5;
 }
 
 .book-now-btn {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #383859;
+  background-color: #6a7196;
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -251,14 +250,14 @@ overflow: hidden;
   text-align: center;
   margin: 20px;
 }
-.more-link a{
+.more-link a,.more-link p{
   text-decoration: none;
   color: rgb(242, 213, 213);
   font-size: 20px;
   margin: 10px;
   transition: all 0.5s ease;
 }
-.more-link a:hover{
+.more-link a:hover,.more-link p:hover{
   color: #febb75;
 }
 
@@ -295,6 +294,10 @@ overflow: hidden;
   flex: 1;
   margin: 20px;
   padding: 20px;
+  color: #f5f5f5;
+}
+.about-desc section p{
+  line-height: 40px;
 }
 
 .about-city {
@@ -302,14 +305,15 @@ overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* Center align content */
-  width: 80%;
-  margin-top: 50px; /* Adjusted margin for responsiveness */
-  margin-bottom: 50px; /* Adjusted margin for responsiveness */
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #febb75;
 }
 
 .about-city h3 {
   font-size: 20px;
-  color: white;
+  color: black;
   font-weight: 700;
   letter-spacing: 0.05em;
   margin: 30px;
@@ -320,7 +324,8 @@ overflow: hidden;
   flex-direction: row;
   justify-content: space-between;
   gap: 100px;
-  font-size: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
   align-items: center;
 }
 
@@ -339,6 +344,7 @@ overflow: hidden;
   align-items: center;
   flex-direction: column;
   scroll-margin-top: 100px;
+  background-color: #8b93be;
 }
 
 .contact-title {
@@ -359,8 +365,8 @@ overflow: hidden;
 }
 
 .contactus p {
-  font-size: 15px;
-  width: 80%; /* Adjusted width for responsiveness */
+  font-size: 17px;
+  width: 70%; /* Adjusted width for responsiveness */
   text-align: center;
 }
 
@@ -380,19 +386,20 @@ overflow: hidden;
 input,
 textarea {
   outline: none;
-  font-size: 16px; /* Adjusted font size for responsiveness */
+  font-size: 16px;
   padding: 8px;
-  width: 100%; /* Full width */
+  width: 70%;
   color: white;
   margin: 5px 0;
   transition: all 0.4s ease;
   border: none;
   border-bottom: 1px solid;
   background-color: transparent;
+  resize: none;
 }
 
 .contact-form form button {
-  width: 100%; /* Full width */
+  width: 30%; /* Full width */
   padding: 10px;
   margin: 20px 0; /* Adjusted margin for responsiveness */
   background-color: #383859;
@@ -539,5 +546,15 @@ textarea {
   }
   .about-city .city{
     flex-direction: column;
+    gap: 20px;
+  }
+  .turf{
+    scroll-margin-top: 70px;
+  }
+  .aboutus-container{
+    scroll-margin-top: 70px;
+  }
+  .contactus{
+    scroll-margin-top: 70px;
   }
 }
