@@ -59,6 +59,7 @@ body {
   letter-spacing: 0.05em;
   color: white;
   transition: all 0.5s ease;
+  font-weight: 500;
 }
 .navigation ul li.active a .text {
   font-size: 22px;
@@ -226,86 +227,94 @@ overflow: hidden;
   color: #febb75;
 }
 
-.aboutus-container{
+.aboutus-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   scroll-margin-top: 100px;
+  padding: 50px 0; /* Adjusted padding for responsiveness */
+  box-sizing: border-box; /* Include padding in total height */
 }
 
-.aboutus-container h1{
+.aboutus-container h1 {
   font-size: 50px;
   color: white;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-align: center;
-  margin: 50px;
+  margin: 20px 0; /* Adjusted margin for responsiveness */
 }
-.aboutus-container .about-desc{
+
+.aboutus-container .about-desc {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  /* align-items: center; */
+  justify-content: space-around; /* Adjusted spacing between sections */
   flex-wrap: wrap;
   width: 80%;
   margin: 10px;
 }
+
 .about-desc section {
   flex: 1;
   margin: 20px;
   padding: 20px;
 }
 
-h2 {
-  font-size: 32px;
-  color: white;
-}
-
-p {
-  line-height: 1.6;
-  color: white;
-}
-.about-city{
+.about-city {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center; /* Center align content */
+  width: 80%;
+  margin-top: 50px; /* Adjusted margin for responsiveness */
+  margin-bottom: 50px; /* Adjusted margin for responsiveness */
 }
-.about-city h3{
+
+.about-city h3 {
   font-size: 20px;
   color: white;
   font-weight: 700;
   letter-spacing: 0.05em;
-  margin: 50px;
+  margin: 20px 0; /* Adjusted margin for responsiveness */
   text-align: center;
 }
-.about-city .city{
+
+.about-city .city {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.contactus{
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .aboutus-container .about-desc {
+    flex-direction: column;
+  }
+}
+
+
+.contactus {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   scroll-margin-top: 100px;
 }
-.contact-title{
+
+.contact-title {
   margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-.contactus h1{
+
+.contactus h1 {
   font-size: 50px;
   color: white;
   font-weight: 700;
@@ -313,28 +322,32 @@ p {
   text-align: center;
   margin-bottom: 50px;
 }
-.contactus p{
+
+.contactus p {
   font-size: 15px;
-  width: 60%;
+  width: 80%; /* Adjusted width for responsiveness */
   text-align: center;
 }
-.contactus .contact-form{
-  width: 60%;
+
+.contactus .contact-form {
+  width: 80%; /* Adjusted width for responsiveness */
 }
-.contactus .contact-form form{
+
+.contactus .contact-form form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
+  width: 100%; /* Full width */
   margin: 10px;
 }
-input,textarea{
+
+input,
+textarea {
   outline: none;
-  font-size: 22px;
+  font-size: 16px; /* Adjusted font size for responsiveness */
   padding: 8px;
-  width: 99%;
+  width: 100%; /* Full width */
   color: white;
   margin: 5px 0;
   transition: all 0.4s ease;
@@ -342,14 +355,11 @@ input,textarea{
   border-bottom: 1px solid;
   background-color: transparent;
 }
-input:focus,textarea:focus{
-  background-color: #00000045;
-  border-radius: 15px;
-}
-.contact-form form button{
-  width: 200px;
+
+.contact-form form button {
+  width: 100%; /* Full width */
   padding: 10px;
-  margin: 20px;
+  margin: 20px 0; /* Adjusted margin for responsiveness */
   background-color: #383859;
   color: #fff;
   text-align: center;
@@ -359,37 +369,100 @@ input:focus,textarea:focus{
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.contact-form form button:hover{
+
+.contact-form form button:hover {
   background-color: #2a2a42;
 }
 
-.footer{
-  background-color: #393984;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(1, 3fr);
-  background-color: #333;
+
+.footer {
+  width: 100%;
+  background-color: black;
+  padding: 50px;
   color: #fff;
-  padding: 20px;
-  text-align: left;
 }
 
-.footer-row{
-  width: 100%;
-  height: auto;
-  display: grid;
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
-.footer-comapny,.footer-links,.footer-contact{
-  width: 30%;
-  color: white;
-  height: auto;
+
+.footer-company {
+  flex: 1;
+  max-width: 400px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-company img {
+}
+
+.links,
+.footer-contact {
+  flex: 1;
+  max-width: 300px;
+}
+
+.links h3 {
+  font-size: 25px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+.links ul li a{
+  text-decoration: none;
+  color: rgb(242, 213, 213);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.links ul li a:hover{
+  color: #febb75;
+}
+.footer-contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  margin: 10px;
+  align-items: flex-start;
 }
-.footer-comapny img{
-  object-fit: cover;
-  margin: 10px;
+.footer-contact h3{
+  font-size: 25px;
 }
+.footer-contact ul li {
+  margin-bottom: 10px;
+  list-style: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-contact a,ul li span{
+  color: rgb(242, 213, 213);
+  text-decoration: none;
+  font-weight: lighter;
+}
+.copyright{
+  text-align: center;
+  margin: 30px;
+  margin-top: 100px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+  .footer-company,
+  .links,
+  .footer-contact {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* RESPONSIVE */
