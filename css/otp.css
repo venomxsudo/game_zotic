@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900|Montserrat:300,400,500,700,900");
 
+/* #fb948f,#f1cbc9,#c26c85,#febb75 */
 * {
   margin: 0;
   padding: 0;
@@ -135,6 +136,9 @@ p span{
 
   input[type="number"] {
     font-size: 18px;
+  }
+  .form-title h1{
+    font-size: 20px;
   }
 
   .form-group {
