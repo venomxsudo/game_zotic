@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900|Montserrat:300,400,500,700,900");
-
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
 * {
   margin: 0;
   padding: 0;
@@ -84,6 +91,9 @@ body {
   align-items: center;
   flex-direction: row;
 overflow: hidden;
+animation: fadeInAnimation ease 3s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
 }
 .main-page h1{
   font-size: 50px;
@@ -169,6 +179,9 @@ overflow: hidden;
   width: 100%;
   background-color: #464971;
   scroll-margin-top: 100px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 .title{
   margin: 50px;
@@ -268,8 +281,11 @@ overflow: hidden;
   align-items: center;
   flex-direction: column;
   scroll-margin-top: 100px;
-  padding: 50px 0; /* Adjusted padding for responsiveness */
-  box-sizing: border-box; /* Include padding in total height */
+  padding: 50px 0;
+  box-sizing: border-box; 
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .aboutus-container h1 {
@@ -345,6 +361,9 @@ overflow: hidden;
   flex-direction: column;
   scroll-margin-top: 100px;
   background-color: #8b93be;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .contact-title {
@@ -540,6 +559,7 @@ textarea {
   }
   .main-page .heading{
     display: block;
+    position: fixed;
   }
   .about-desc section{
     margin: 10px;
