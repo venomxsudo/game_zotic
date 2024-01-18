@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/img/ball.png" />
     <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/color.css">
     <title>Game Zotic | Let's Play</title>
   </head>
   <body>
-    <div class="navigation h-class">
+    <div class="navigation h-class alt-color">
       <ul class="v-class navlist">
         <li class="list active">
           <a href="#">
@@ -46,10 +47,10 @@
 
     <div class="main-page">
       <div class="heading">Game Zotic</div>
-      <div class="ball-img">
+      <!-- <div class="ball-img">
         <img src="/img/ball.png" alt="GameZoo.com" id="ball" />
-      </div>
-      <h1>Unleash Your Inner Beast <br />Book Your Turf Now...</h1>
+      </div> -->
+      <h1>Unleash Your Inner Beast Book Your Turf Now</h1>
       <div class="arrow-div">
         <div class="arrow bounce">
           <p class="fa fa-arrow-down fa-2x"></p>
@@ -183,6 +184,20 @@
       image.style.transform = "rotate(-" + window.pageYOffset / 2 + "deg)";
     }
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.querySelector('.navigation');
+
+    window.addEventListener('scroll', function() {
+        var scrollPos = window.scrollY;
+
+        if (scrollPos > 400) {
+            navbar.classList.add('alt-color');
+        } else {
+            navbar.classList.remove('alt-color');
+        }
+    });
+});
 
   </script>
   <script src="/resp.js"></script>  
