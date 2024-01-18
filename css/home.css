@@ -72,6 +72,21 @@ body {
 .alt-color{
   background-color: #41c9a9 !important; 
 }
+.navigation .profile-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  margin: 10px;
+}
+.navigation .profile-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 .burger{
   display: none;
@@ -126,7 +141,7 @@ background-size: cover;
   position: absolute;
   left: 5%;
   z-index: 4;
-  top: 30px;
+  top: 20px;
   font-size: 20px;
   font-weight: 700;
 }
@@ -341,8 +356,6 @@ background-size: cover;
   margin-bottom: 20px;
   align-items: center;
 }
-.city p{
-}
 
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
@@ -536,14 +549,19 @@ textarea {
   }
   .burger{
     display: block;
+    z-index: 2;
+  }
+  .burger .line{
+    background-color: transparent;
+  }
+  .profile-img{
+    top: 0;
   }
   .v-class{
     opacity: 0;
   }
   .h-class{
     height: 70px;
-  }
-  .main-page{
   }
   .main-page h1{
     font-size: 50px;

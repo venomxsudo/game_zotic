@@ -1,204 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/img/ball.png" />
-    <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="/css/color.css">
-    <title>Game Zotic | Let's Play</title>
-  </head>
-  <body>
-    <div class="navigation h-class alt-color">
-      <ul class="v-class navlist">
-        <li class="list active">
-          <a href="#">
-            <span class="text">HOME</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#turf" onclick="smoothScroll('turf')">
-            <span class="text">TURF</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#aboutus">
-            <span class="text">ABOUT US</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#contact">
-            <span class="text">CONTACT US</span>
-          </a>
-        </li>
-      </ul>
-      
-      <div class="burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- External CSS and Font Awesome -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/img/ball.png" />
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/color.css">
+  
+  <!-- Title of the webpage -->
+  <title>Game Zotic | Let's Play</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="navigation h-class alt-color">
+    <!-- Navigation List -->
+    <ul class="v-class navlist">
+      <li class="list active">
+        <a href="#">
+          <span class="text">HOME</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#turf" onclick="smoothScroll('turf')">
+          <span class="text">TURF</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#aboutus">
+          <span class="text">ABOUT US</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="home.html">
+          <span class="text">CONTACT US</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Burger Menu -->
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <!-- Profile Image -->
+    <div class="profile-img">
+      <img src="/img/ball.png" alt="Profile Image" />
+    </div>
+  </div>
+
+  <!-- Main Page Section -->
+  <div class="main-page">
+    <!-- Heading and Subheading -->
+    <div class="heading">Game Zotic</div>
+    <h1>Unleash Your Inner Beast Book Your Turf Now</h1>
+
+    <!-- Arrow for Scrolling Down -->
+    <div class="arrow-div">
+      <div class="arrow bounce">
+        <p class="fa fa-arrow-down fa-2x"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Turf Section -->
+  <div class="turf" id="turf">
+    <!-- Turf Title -->
+    <div class="title">
+      <h1>Turf near you</h1>
+    </div>
+
+    <!-- Turf Cards -->
+    <div class="cards">
+      <!-- Turf Card 1 -->
+      <div class="card">
+        <img src="/img/123.jpeg" alt="Turf Image" />
+        <div class="card-content">
+          <div class="turf-name">Lions Club,Navrangpura</div>
+          <div class="price">1200/-</div>
+          <a href="#" class="book-now-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Turf Card 2 -->
+      <div class="card">
+        <img src="/img/123.jpeg" alt="Turf Image" />
+        <div class="card-content">
+          <div class="turf-name">9 Brothers,Gota</div>
+          <div class="price">1300/-</div>
+          <a href="#" class="book-now-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Turf Card 3 -->
+      <div class="card">
+        <img src="/img/123.jpeg" alt="Turf Image" />
+        <div class="card-content">
+          <div class="turf-name">Hello World,Gandhinagar</div>
+          <div class="price">1100/-</div>
+          <a href="#" class="book-now-btn">Book Now</a>
+        </div>
       </div>
     </div>
 
-    <div class="main-page">
-      <div class="heading">Game Zotic</div>
-      <!-- <div class="ball-img">
-        <img src="/img/ball.png" alt="GameZoo.com" id="ball" />
-      </div> -->
-      <h1>Unleash Your Inner Beast Book Your Turf Now</h1>
-      <div class="arrow-div">
-        <div class="arrow bounce">
-          <p class="fa fa-arrow-down fa-2x"></p>
-        </div>
-      </div>
+    <!-- More Turfs Link -->
+    <div class="more-link">
+      <a href="/html/turf.html">More Turfs...<p class="fa fa-arrow-right fa-2x"></p></a>
     </div>
-    <div class="turf" id="turf">
-      <div class="title">
-        <h1>Turf near you</h1>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <img src="/img/123.jpeg" alt="Turf Image" />
-          <div class="card-content">
-            <div class="turf-name">Lions Club,Navrangpura</div>
-            <div class="price">1200/-</div>
-            <a href="#" class="book-now-btn">Book Now</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/img/123.jpeg" alt="Turf Image" />
-          <div class="card-content">
-            <div class="turf-name">9 Brothers,Gota</div>
-            <div class="price">1300/-</div>
-            <a href="#" class="book-now-btn">Book Now</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/img/123.jpeg" alt="Turf Image" />
-          <div class="card-content">
-            <div class="turf-name">Hello World,Gandhinagar</div>
-            <div class="price">1100/-</div>
-            <a href="#" class="book-now-btn">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="more-link">
-        <a href="#">More Turfs...<p class="fa fa-arrow-right fa-2x"></p></a>
-      </div>
-    </div>
+  </div>
 
+  <!-- About Us Section -->
+  <div class="aboutus-container" id="aboutus">
+    <!-- About Us Header -->
+    <header>
+      <h1>About Us</h1>
+    </header>
 
-    <div class="aboutus-container" id="aboutus">
-      <header>
-        <h1>About Us</h1>
-      </header>
-      <div class="about-desc">
+    <!-- About Us Description -->
+    <div class="about-desc">
+      <!-- About GameZotic -->
       <section>
         <h2>About GameZotic</h2>
         <p>
           GameZotic, created by a group of five college students, is a platform designed to simplify turf bookings near you. Whether you're a sports enthusiast or someone looking for a convenient way to book turfs, GameZotic is here to make the process easy and efficient.
         </p>
       </section>
-      
+
+      <!-- About Nuvion Technologies -->
       <section>
         <h2>About Nuvion Technologies</h2>
         <p>
           Nuvion Technologies is dedicated to providing cutting-edge IT solutions. As the driving force behind GameZotic, our goal is to leverage technology to enhance user experiences and streamline turf booking processes. We are committed to innovation and excellence in the world of information technology.
         </p>
       </section>
+    </div>
+
+    <!-- Cities We Operate -->
+    <div class="about-city">
+      <h3>Cities We are operating</h3>
+      <div class="city">
+        <p>GANDHINAGAR</p>
+        <p>SURAT</p>
+        <p>AHMEDABAD</p>
       </div>
-      <div class="about-city">
-        <h3>Cities We are operating</h3>
-        <div class="city">
-          <p>GANDHINAGAR</p>
-          <p>SURAT</p>
-          <p>AHMEDABAD</p>
-        </div>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="contactus" id="contact">
+    <!-- Contact Us Title and Description -->
+    <div class="contact-title">
+      <h1>Contact Us</h1>
+      <p>Should you come across any inaccuracies or false information regarding turf on our platform, or if you are interested in becoming a part of our services, please feel free to reach out to us. Your feedback is valuable, and we welcome the opportunity to address any concerns or explore collaboration possibilities. Contact us, and let's create a better experience together!</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form action="post">
+        <input type="text" placeholder="Name" id="name" required />
+        <input type="email" placeholder="Email" id="email" required />
+        <textarea name="message" id="message" cols="10" rows="5" placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="footer-row">
+      <!-- Footer Company Information -->
+      <div class="footer-company">
+        <!-- Company Description -->
+        <p>Nuvion Technologies is dedicated to providing cutting-edge IT solutions. As the driving force behind GameZotic, our goal is to leverage technology to enhance user experiences and streamline turf booking processes. We are committed to innovation and excellence in the world of information technology.</p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="links">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#turf">Turf</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Contact Information -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Mail : <a href="mailto:support@nuvion.tech">support@nuvion.tech</a></li>
+          <li>Phone : <a href="tel:+91 635 313 0000">+91 635 313 0000</a></li>
+          <li>Address : <span>Sector 14, Gandhinagar, Gujarat - 382016</span></li>
+        </ul>
       </div>
     </div>
 
-    <div class="contactus" id="contact">
-      <div class="contact-title">
-        <h1>Contact Us</h1>
-        <p>Should you come across any inaccuracies or false information regarding turf on our platform, or if you are interested in becoming a part of our services, please feel free to reach out to us. Your feedback is valuable, and we welcome the opportunity to address any concerns or explore collaboration possibilities. Contact us, and let's create a better experience together!</p>
-      </div>
-      <div class="contact-form">
-        <form action="post">
-          <input type="text" placeholder="Name" id="name" required />
-          <input type="email" placeholder="Email" id="email" required/>
-          <textarea name="message" id="message" cols="10" rows="5" placeholder="Message"></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+    <!-- Copyright Information -->
+    <div class="copyright">
+      <p>&copy; 2024 <span>Nuvion Technologies </span>| All Rights Reserved.</p>
     </div>
-    <div class="footer">
-      <div class="footer-row">
-        <div class="footer-company">
-          <!-- <img src="/img/WhatsApp Image 2024-01-16 at 23.28.05.jpeg" alt="" width="200" height="200"> -->
-          <p>Nuvion Technologies is dedicated to providing cutting-edge IT solutions. As the driving force behind GameZotic, our goal is to leverage technology to enhance user experiences and streamline turf booking processes. We are committed to innovation and excellence in the world of information technology.</p>
-        </div>
-        <div class="links">
-          <h3>Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#turf">Turf</a></li>
-            <li><a href="#aboutus">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <ul>
-            <li>Mail : <a href="mailto:support@nuvion.tech">support@nuvion.tech</a></li>
-            <li>Phone : <a href="tel:+91 635 313 0000">+91 635 313 0000</a></li>
-            <li>Address : <span>Sector 14, Gandhinagar, Gujarat - 382016</span></li>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2024 <span>Nuvion Technologies </span>| All Rights Reserved.</p>
-      </div>
-    </div>
-  </body>
+  </div>
 
+  <!-- Script Section -->
   <script>
+    // Check screen width for specific functionality
     if (screen.width > 1200) {
-    const list = document.querySelectorAll(".list");
-    function activeLink() {
-      list.forEach((item) => item.classList.remove("active"));
-      this.classList.add("active");
+      // Add click event listeners to navigation links
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+
+      // Rotate the image on scroll
+      window.onscroll = function () {
+        scrollRotate();
+      };
+
+      function scrollRotate() {
+        let image = document.getElementById("ball");
+        image.style.transform = "rotate(-" + window.pageYOffset / 2 + "deg)";
+      }
     }
-    list.forEach((item) => item.addEventListener("click", activeLink));
 
+    // Change navigation bar color on scroll
+    document.addEventListener('DOMContentLoaded', function () {
+      var navbar = document.querySelector('.navigation');
 
-    window.onscroll = function () {
-      scrollRotate();
-    };
-
-    function scrollRotate() {
-      let image = document.getElementById("ball");
-      image.style.transform = "rotate(-" + window.pageYOffset / 2 + "deg)";
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var navbar = document.querySelector('.navigation');
-
-    window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function () {
         var scrollPos = window.scrollY;
 
         if (scrollPos > 400) {
-            navbar.classList.add('alt-color');
+          navbar.classList.add('alt-color');
         } else {
-            navbar.classList.remove('alt-color');
+          navbar.classList.remove('alt-color');
         }
+      });
     });
-});
-
   </script>
-  <script src="/resp.js"></script>  
+  <script src="/resp.js"></script>
+</body>
+
 </html>

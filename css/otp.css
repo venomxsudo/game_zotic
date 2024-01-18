@@ -6,12 +6,9 @@
   padding: 0;
   font-family: 'Poppins',Helvetica;
 }
-body {
-  background-color: #000;
-}
 .heading h1{
   padding: 30px 0 5px 60px;
-  color:#f1cbc9;  
+  color:#41c9a9;  
   letter-spacing: 3px;
   font-size: 40px;
   font-family: 'Montserrat';
@@ -23,9 +20,8 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 40px;
-  background: #1b1c2c;
-  box-shadow:  11px 11px 16px #12131d,
-               -11px -11px 16px #24253b;
+  background: white;
+  box-shadow: 0px 0px 10px 0px #00000045;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -41,7 +37,7 @@ body {
   align-items: center;
 }
 .login-box h1 {
-  color: white;
+  color: #333;
   letter-spacing: 3px;
   margin-top: 20px;
 }
@@ -58,12 +54,12 @@ input[type="number"]{
   font-size: 22px;
   padding: 8px;
   width: 100%;
-  color: white;
+  color: black;
   border: none;
   border-bottom: 1px solid;
   background-color: transparent;
   margin: 5px 0;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -72,13 +68,13 @@ input::-webkit-inner-spin-button {
 }
 
 input:focus {
-  background-color: #00000045;
+  background-color: #41c9a93a;
   border-radius: 15px;
 
 }
 .form-group label {
   font-size: 20px;
-  color: white;
+  color: #333;
 }
 .btn {
   text-align: center;
@@ -87,20 +83,18 @@ input:focus {
   margin: 30px;
 }
 .btn button {
-  background-color: red;
   width: 250px;
   height: 40px;
   font-size: 20px;
-  color: white;
+  color: #000000;
   outline: none;
   border: none;
   border-radius: 10px;
-background: #c26c85;
-  transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+background: #b9b9b9;
+  transition: all 0.3s ease-out;
 }
 .btn button:hover {
-  background-color: #995568;
+  background-color: #5da292;
   cursor: pointer;
 }
 .btn button:active {
@@ -109,7 +103,7 @@ background: #c26c85;
 .footer{
   position: fixed;
   text-align: right;
-  color: white;
+  color: #333;
   font-size: 15px;
   padding: 5px 10px 0px 0px;
   bottom: 0;
@@ -118,7 +112,7 @@ background: #c26c85;
   background-color: transparent;
 }
 p span{
-  color:#f1cbc9;
+  color:#41c9a9;
   font-size: 15px;
   font-weight: 700;
 }

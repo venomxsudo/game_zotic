@@ -7,7 +7,7 @@
 }
 .heading h1{
   padding: 30px 0 5px 60px;
-  color:#f1cbc9;
+  color:#41c9a9;
   letter-spacing: 3px;
   font-size: 40px;
   font-family: 'Montserrat';
@@ -19,10 +19,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 40px;
-  background: #1b1c2c;
-  box-shadow:  11px 11px 16px #12131d,
-               -11px -11px 16px #24253b;
   position: absolute;
+  background: white;
+  box-shadow: 0px 0px 10px 0px #00000045;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -38,7 +37,7 @@
   align-items: center;
 }
 .login-box h1 {
-  color: white;
+  color: #333;
   letter-spacing: 3px;
   margin-top: 20px;
 }
@@ -54,7 +53,7 @@ input[type="number"],input[type="email"]{
   font-size: 22px;
   padding: 8px;
   width: 99%;
-  color: white;
+  color: black;
   margin: 5px 0;
   transition: all 0.4s ease;
   border: none;
@@ -62,7 +61,7 @@ input[type="number"],input[type="email"]{
   background-color: transparent;
 }
 input:focus {
-  background-color: #00000045;
+  background-color: #41c9a93a;
   border-radius: 15px;
 }
 input::-webkit-outer-spin-button,
@@ -72,7 +71,7 @@ input::-webkit-inner-spin-button {
 }
 .form-group label {
   font-size: 20px;
-  color: white;
+  color: #333;
 }
 .checkbox {
   margin: 7px 0;
@@ -94,15 +93,16 @@ input::-webkit-inner-spin-button {
   width: 250px;
   height: 40px;
   font-size: 20px;
-  color: white;
+  color: #000000;
   outline: none;
   border: none;
   border-radius: 10px;
-background: #c26c85;
-  transition: all 0.5s ease-out;
+background: #b9b9b9;
+  transition: all 0.3s ease-out;
 }
 .login-button button:hover {
-  background-color: #995568;
+  background-color: #5da292;
+  color: white;
   cursor: pointer;
 }
 .login-button button:active {
@@ -127,11 +127,9 @@ background: #c26c85;
   border-radius: 100px;
   margin: 15px 0 15px 0;
   transition: all 0.2s ease;
-  color: #febb75;
+  color: #cd5f5f;
   border-radius: 15px;
-background: linear-gradient(145deg, #1d1e2f, #181928);
-box-shadow:  4px 4px 14px #0b0b12,
-             -4px -4px 14px #2b2d46;
+  background-color: #f1cbc9;
 }
 .google-icon-wrapper {
   position: absolute;
@@ -146,7 +144,7 @@ box-shadow:  4px 4px 14px #0b0b12,
 .btn-text {
   float: right;
   margin: 14px 10px;
-  color: #febb75;
+  color: #cd5f5f;
   font-size: 16px;
   letter-spacing: 0.2px;
 }
@@ -172,7 +170,7 @@ hr{
 .footer{
   position: fixed;
   text-align: right;
-  color: white;
+  color: black;
   font-size: 15px;
   padding: 5px 10px 0px 0px;
   bottom: 0;
@@ -181,7 +179,7 @@ hr{
   background-color: transparent;
 }
 p span{
-  color: #f1cbc9;
+  color: #41c9a9;
   font-size: 15px;
   font-weight: 700;
 }

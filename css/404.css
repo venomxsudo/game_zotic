@@ -7,30 +7,30 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body{
-  background-color: #1b1b2c;
+body {
+  background-color: #f5f5f5;
 }
-.heading h1{
-  color:#f1cbc9;
+.heading h1 {
+  color: #41c9a9;
   letter-spacing: 3px;
   font-size: 40px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-align: left;
   margin: 30px;
 }
-.footer{
+.footer {
   position: fixed;
   text-align: right;
-  color: white;
+  color: #333;
   font-size: 15px;
   padding: 5px 10px 0px 0px;
   bottom: 0;
-  right:0;
+  right: 0;
   margin-bottom: 30px;
   background-color: transparent;
 }
-p span{
-  color: #f1cbc9;
+p span {
+  color: #41c9a9;
   font-size: 15px;
   font-weight: 700;
 }
@@ -69,7 +69,7 @@ p span{
       transparent 77%,
       transparent 100%
     ),
-    linear-gradient(to right, #804947, #874c4a);
+    linear-gradient(to right, #477880, #4a8786);
 }
 .error-container > span.four:before,
 .error-container > span.four:after {
@@ -97,7 +97,7 @@ p span{
       transparent 51%,
       transparent 100%
     ),
-    linear-gradient(to top, #804947, #a6615e, #c97672, #e58b86, #fb948f);
+    linear-gradient(to top, #477680, #5e99a6, #72bcc9, #86e5e3, #8ffbf4);
 }
 .error-container > span.four:after {
   width: 137px;
@@ -107,11 +107,11 @@ p span{
   bottom: 36px;
   background: linear-gradient(
     to left,
-    #804947,
-    #a6615e,
-    #c97672,
-    #e58b86,
-    #fb948f
+    #477c80,
+    #5ea0a6,
+    #72c0c9,
+    #86e3e5,
+    #8ff0fb
   );
 }
 
@@ -129,13 +129,13 @@ p span{
     ),
     linear-gradient(
       to top right,
-      #7d4e4a,
-      #623937,
-      #804947,
-      #a6615e,
-      #c97672,
-      #e58b86,
-      #fb948f
+      #4a7a7d,
+      #375e62,
+      #477680,
+      #5e90a6,
+      #72bac9,
+      #86dde5,
+      #8ff6fb
     );
   overflow: hidden;
   animation: bgshadow 5s infinite;
@@ -177,7 +177,7 @@ p span{
   height: 70px;
   left: 43px;
   bottom: 43px;
-  background: #1b1b2c;
+  background: #f5f5f5;
   box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -202,7 +202,6 @@ p span{
   }
 }
 
-/* demo stuff */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -214,12 +213,12 @@ input,
 select,
 textarea {
   font-family: "Montserrat", Helvetica, sans-serif;
-  color: white;
+  color: #333;
 }
 h1 {
   text-align: center;
   margin: 60px 15px;
-  color: #febb75;
+  color: black;
   font-size: 40px;
 }
 .zoom-area {
@@ -234,7 +233,7 @@ h1 {
 a.more-link {
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #b98685;
+  background-color: #ff9292;
   padding: 10px 15px;
   border-radius: 0;
   color: #fff;
