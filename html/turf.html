@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Zotic</title>
+    <link rel="stylesheet" href="/css/turf.css" />
+    <link rel="stylesheet" href="/css/headerfooter.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/ball.png" />
+  </head>
+  <body>
+    <div class="navigation">
+      <p class="home">
+        <a href="/html/home.html">HOME</a>
+      </p>
+      <!-- Profile Image -->
+      <div class="profile-img">
+        <img src="/img/ball.png" alt="Profile Image" />
+      </div>
+    </div>
+
+    <div class="heading">
+        <h1>Search Turfs in your city</h1>
+    </div>
+
+    <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="Enter City name...">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+     </div>
+
+
+
+
+    <div class="footer">
+        <div class="footer-row">
+          <!-- Footer Company Information -->
+          <div class="footer-company">
+            <!-- Company Description -->
+            <p>Nuvion Technologies is dedicated to providing cutting-edge IT solutions. As the driving force behind GameZotic, our goal is to leverage technology to enhance user experiences and streamline turf booking processes. We are committed to innovation and excellence in the world of information technology.</p>
+          </div>
+    
+          <!-- Footer Links -->
+          <div class="links">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#turf">Turf</a></li>
+              <li><a href="#aboutus">About Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+    
+          <!-- Footer Contact Information -->
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Mail : <a href="mailto:support@nuvion.tech">support@nuvion.tech</a></li>
+              <li>Phone : <a href="tel:+91 635 313 0000">+91 635 313 0000</a></li>
+              <li>Address : <span>Sector 14, Gandhinagar, Gujarat - 382016</span></li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- Copyright Information -->
+        <div class="copyright">
+          <p>&copy; 2024 <span>Nuvion Technologies </span>| All Rights Reserved.</p>
+        </div>
+      </div>
+  </body>
+  <script>
+    // Check screen width for specific functionality
+    if (screen.width > 1200) {
+      // Add click event listeners to navigation links
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+    }
+
+    // Change navigation bar color on scroll
+    document.addEventListener("DOMContentLoaded", function () {
+      var navbar = document.querySelector(".navigation");
+
+      window.addEventListener("scroll", function () {
+        var scrollPos = window.scrollY;
+
+        if (scrollPos > 400) {
+          navbar.classList.add("alt-color");
+        } else {
+          navbar.classList.remove("alt-color");
+        }
+      });
+    });
+
+    // search button
+
+    const clearInput = () => {
+      const input = document.getElementsByTagName("input")[0];
+      input.value = "";
+    };
+
+    const clearBtn = document.getElementById("clear-btn");
+    clearBtn.addEventListener("click", clearInput);
+  </script>
+  <script src="/resp.js"></script>
+</html>
