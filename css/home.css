@@ -282,12 +282,15 @@ background-size: cover;
   text-align: center;
   margin: 20px;
 }
-.more-link a,.more-link p{
+.more-link a,.more-link span{
   text-decoration: none;
   font-size: 20px;
   margin: 10px;
   transition: all 0.5s ease;
-  color: #ff6f61;
+  color: #333;
+}
+.more-link a:hover >span,.more-link a:hover{
+  color: #41c9a9;
 }
 
 .aboutus-container {

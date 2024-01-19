@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Zotic</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/animation.css" />
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="area" >
+    <div class="loader" id="loader">
+      <img
+        src="/img/ball.png"
+        class="rotate"
+        width="100"
+        height="100"
+      />
+    </div>
+    <div class="area">
       <ul class="circles">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
-</div>
+    </div>
     <div class="mobileLogin" id="mobileLogin">
       <div class="background">
         <div class="heading">
@@ -41,8 +52,8 @@
             <div class="form-title">
               <h1>Log in</h1>
             </div>
-            <div class="form-group">
-              <label for="phone_number">Mobile</label><br />
+            <!-- <div class="form-group">
+              <label for="phone_number">Email</label><br />
               <input
                 type="number"
                 name="phone_number"
@@ -53,14 +64,20 @@
             this.value.slice(0, this.maxLength);"
                 maxlength="10"
               />
+            </div> -->
+            <div class="form-group">
+              <label for="email">Email</label><br />
+              <input type="email" name="email" id="email" required />
             </div>
 
             <div class="form-group">
               <div class="login-button">
-                <a href="/html/otp.html"
-                  ><button type="submit" name="login" id="login">
-                    Continue
-                  </button></a>
+                <button
+                  type="submit"
+                  name="login"
+                  id="login"
+                  onclick="showLoader()">Continue</button>
+                <a href="#" id="redirectLink" style="display: none"></a>
               </div>
             </div>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -122,23 +139,23 @@
             <div class="external">
               <!-- SIGN IN WITH Google -->
               <div class="google-btn">
-                  <button>
-                      <div class="google-icon-wrapper">
-                          <i class="fab fa-google google-icon"></i>
-                      </div>
-                      <p class="btn-text">Continue with Google</p>
-                  </button>
+                <button>
+                  <div class="google-icon-wrapper">
+                    <i class="fab fa-google google-icon"></i>
+                  </div>
+                  <p class="btn-text">Continue with Google</p>
+                </button>
               </div>
-          
-              <div class="email-btn">
+
+              <!-- <div class="email-btn">
                   <button onclick="emailpopup()">
                       <div class="google-icon-wrapper">
                           <i class="fas fa-envelope  google-icon"></i>
                       </div>
                       <p class="btn-text">Continue with Email</p>
                   </button>
-              </div>
-          </div>
+              </div> -->
+            </div>
           </div>
         </div>
         <div class="footer">
@@ -147,13 +164,11 @@
       </div>
     </div>
 
-
-<!-- --------------------------------------------------
+    <!-- --------------------------------------------------
 
 EMAIL LOGIN STARTS
 
 -------------------------------------------------- -->
-
 
     <div class="emailLogin" id="emailLogin">
       <div class="background">
@@ -161,8 +176,6 @@ EMAIL LOGIN STARTS
           <h1>Game Zotic</h1>
         </div>
         <div class="box">
-
-
           <!-- LOGIN FORM STARTS HERE -->
           <div class="login-box">
             <div class="form-title">
@@ -179,7 +192,8 @@ EMAIL LOGIN STARTS
                 <a href="otp.html"
                   ><button type="submit" name="login" id="login">
                     Continue
-                  </button></a>
+                  </button></a
+                >
               </div>
             </div>
 
@@ -195,15 +209,31 @@ EMAIL LOGIN STARTS
     </div>
   </body>
   <script>
-      var emailPopup = document.getElementById("emailLogin");
-      var mobilePopup = document.getElementById('mobileLogin');
+    var emailPopup = document.getElementById("emailLogin");
+    var mobilePopup = document.getElementById("mobileLogin");
     function emailpopup() {
       emailPopup.style.display = "block";
-      mobilePopup.style.display='none';
+      mobilePopup.style.display = "none";
     }
-    function mobile(){
+    function mobile() {
       emailPopup.style.display = "none";
-      mobilePopup.style.display='block';
+      mobilePopup.style.display = "block";
+    }
+
+    // loader
+    function showLoader() {
+      const loader = document.getElementById("loader");
+      const redirectLink = document.getElementById("redirectLink");
+
+      // Show the loader with a smooth fade in
+      loader.classList.add("show");
+
+      // Simulate a delay (1 second in this case)
+      setTimeout(() => {
+        // Redirect after the delay
+        redirectLink.href = "http://127.0.0.1:5500/html/otp.html"; // Replace with your actual redirect URL
+        redirectLink.click();
+      }, 1000);
     }
   </script>
 </html>

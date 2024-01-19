@@ -85,3 +85,37 @@ body{
     display: flex;
     justify-content: center;
   }
+  .searchResults {
+    display: none;
+    position: absolute;
+    width: 40%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-top: 36px;
+    border-radius: 10px;
+  }
+  
+  .searchResultItem {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .searchResultItem:hover {
+    background-color: #f4f4f4;
+  }
+
+  .turfcards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .turfcards .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }

@@ -127,9 +127,9 @@ background: #b9b9b9;
   border-radius: 100px;
   margin: 15px 0 15px 0;
   transition: all 0.2s ease;
-  color: #cd5f5f;
+  color: white;
   border-radius: 15px;
-  background-color: #f1cbc9;
+  background-color: #5da292;
 }
 .google-icon-wrapper {
   position: absolute;
@@ -144,7 +144,7 @@ background: #b9b9b9;
 .btn-text {
   float: right;
   margin: 14px 10px;
-  color: #cd5f5f;
+  color: white;
   font-size: 16px;
   letter-spacing: 0.2px;
 }
@@ -156,11 +156,6 @@ background: #b9b9b9;
 .email-btn:hover {
   transform: scale(1.03);
   cursor: pointer;
-}
-
-.google-btn:active, .email-btn:active {
-  box-shadow: inset 6px 6px 14px #0b0b12,
-  inset -6px -6px 14px #2b2d46;
 }
 
 hr{
@@ -315,7 +310,6 @@ p span{
 
 .emailLogin{
   display: none;
-  color: white;
 }
 .text-wrapper{
   margin-bottom: 20px;
@@ -327,5 +321,50 @@ p span{
 }
 .text-wrapper:hover{
   cursor: pointer;
-  color: rgb(72, 164, 255);
+  color: #41c9a9;
+}
+
+
+
+
+
+
+
+
+
+
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #41c9a908;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 1s ease-in-out;
+}
+
+.loader.show {
+  opacity: 1;
+  visibility: visible;
+}
+.loader .rotate {
+  animation: rotation 1.5s infinite linear;
+  position: relative;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
