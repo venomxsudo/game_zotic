@@ -52,38 +52,39 @@ function searchCity() {
 
 
 
-    // Check screen width for specific functionality
-    if (screen.width > 1200) {
-        // Add click event listeners to navigation links
-        const list = document.querySelectorAll(".list");
-        function activeLink() {
-          list.forEach((item) => item.classList.remove("active"));
-          this.classList.add("active");
-        }
-        list.forEach((item) => item.addEventListener("click", activeLink));
-      }
-  
-      // Change navigation bar color on scroll
-      document.addEventListener("DOMContentLoaded", function () {
-        var navbar = document.querySelector(".navigation");
-  
-        window.addEventListener("scroll", function () {
-          var scrollPos = window.scrollY;
-  
-          if (scrollPos > 400) {
-            navbar.classList.add("alt-color");
-          } else {
-            navbar.classList.remove("alt-color");
-          }
-        });
-      });
-  
-      // search button
-  
-      const clearInput = () => {
-        const input = document.getElementsByTagName("input")[0];
-        input.value = "";
-      };
-  
-      const clearBtn = document.getElementById("clear-btn");
-      clearBtn.addEventListener("click", clearInput);
+// Check screen width for specific functionality
+if (screen.width > 1200) {
+  // Add click event listeners to navigation links
+  const list = document.querySelectorAll(".list");
+  function activeLink() {
+    list.forEach((item) => item.classList.remove("active"));
+    this.classList.add("active");
+  }
+  list.forEach((item) => item.addEventListener("click", activeLink));
+}
+
+// Change navigation bar color on scroll
+document.addEventListener("DOMContentLoaded", function () {
+  var navbar = document.querySelector(".navigation");
+
+  window.addEventListener("scroll", function () {
+    var scrollPos = window.scrollY;
+
+    if (scrollPos > 400) {
+      navbar.classList.add("alt-color");
+    } else {
+      navbar.classList.remove("alt-color");
+    }
+  });
+});
+
+// search button
+
+const clearInput = () => {
+  const input = document.getElementsByTagName("input")[0];
+  input.value = "";
+};
+
+const clearBtn = document.getElementById("clear-btn");
+clearBtn.addEventListener("click", clearInput);
+

@@ -91,3 +91,29 @@
     margin-bottom: 30px;
   }
 }
+@media only screen and (max-width:1200px){
+  .navigation {
+    height: auto;
+    height: 440px;
+    transition: all 0.5s ease-out;
+  }
+  .navigation ul{
+    flex-direction: column;
+    transition: all 0.4s ease-out;
+  }
+  .burger{
+    display: block;
+    z-index: 2;
+  }
+  .burger .line{
+    background-color: transparent;
+  }
+  .profile-img{
+    top: 0;
+  }
+  .v-class{
+    opacity: 0;
+  }
+  .h-class{
+    height: 70px;
+  }}
