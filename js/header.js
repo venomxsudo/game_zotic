@@ -1,6 +1,19 @@
+if (screen.width > 1200) {
+    // Add click event listeners to navigation links
+    const list = document.querySelectorAll(".list");
+    function activeLink() {
+      list.forEach((item) => item.classList.remove("active"));
+      this.classList.add("active");
+    }
+    list.forEach((item) => item.addEventListener("click", activeLink));
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const navList = document.querySelector('.navlist');
-    const burger = document.querySelector('.burger');
+    const burger = document.querySelector('.profile-img');
     const navbar = document.querySelector('.navigation');
 
     // Function to toggle classes
