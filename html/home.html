@@ -15,6 +15,7 @@
   
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/headerfooter.css">
   
   <!-- Title of the webpage -->
   <title>Game Zotic | Let's Play</title>
@@ -47,15 +48,8 @@
       </li>
     </ul>
 
-    <!-- Burger Menu -->
-    <div class="burger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-
     <!-- Profile Image -->
-    <div class="profile-img">
+    <div class="profile-img burger">
       <img src="/img/ball.png" alt="Profile Image" />
     </div>
   </div>
@@ -215,17 +209,6 @@
 
   <!-- Script Section -->
   <script>
-    // Check screen width for specific functionality
-    if (screen.width > 1200) {
-      // Add click event listeners to navigation links
-      const list = document.querySelectorAll(".list");
-      function activeLink() {
-        list.forEach((item) => item.classList.remove("active"));
-        this.classList.add("active");
-      }
-      list.forEach((item) => item.addEventListener("click", activeLink));
-    }
-
     // Change navigation bar color on scroll
     document.addEventListener('DOMContentLoaded', function () {
       var navbar = document.querySelector('.navigation');
@@ -241,7 +224,8 @@
       });
     });
   </script>
-  <script src="/resp.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/turf.js"></script>
 </body>
 
 </html>
