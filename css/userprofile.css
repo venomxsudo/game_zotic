@@ -21,7 +21,7 @@ body{
     background-color: #41c2c235;
     box-sizing: border-box;
     border-radius: 20px;
-    margin: 20px;
+    margin: 15px;
   }
   
   .col-30 {
@@ -118,7 +118,7 @@ body{
     align-items: center;
     padding: 20px;
     background-color: rgba(135, 207, 235, 0.307);
-    border: 1.5px solid #ccc;
+    border: 1.5px solid #333;
     border-radius: 20px;
     margin: 10px auto;
     width: 70%;
@@ -140,6 +140,68 @@ body{
   @media (max-width: 768px) {
     .col {
       flex: 100%; /* Full width on smaller screens */
+    }
+  }
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+  .row{
+    flex-direction: column;
+  }
+    .col {
+      flex: 100%;
+      margin: 20px;
+      border-radius: 10px;
+    }
+  
+    .profile .col-30 h1 {
+      padding: 10px;
+      font-size: 18px; /* Adjusted font size for smaller screens */
+    }
+  
+    .profile-details .data {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px; /* Adjusted font size for smaller screens */
+    }
+  
+    .profile-details span {
+      margin-left: 5px; /* Adjusted margin for smaller screens */
+      font-weight: bold;
+    }
+  
+    .profile .buttons {
+      width: 90%;
+    }
+  
+    .profile .buttons button {
+      width: 100%;
+      font-size: 16px; /* Adjusted font size for smaller screens */
+      margin: 2px;
+    }
+  
+    .history-heading {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .history {
+      width: 100%; /* Full width on smaller screens */
+      margin: 10px auto; /* Adjusted margin for better spacing */
+    }
+  
+    .turf-row {
+      width: 90%; /* Full width on smaller screens */
+      margin: 10px auto; /* Adjusted margin for better spacing */
+    }
+  
+    .turf-row .t {
+      flex: 100%; /* Full width for each column on smaller screens */
+      margin-bottom: 10px; /* Adjusted margin for better spacing */
     }
   }
   
