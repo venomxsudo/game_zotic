@@ -43,13 +43,7 @@ document.addEventListener('click', function (event) {
 function searchCity() {
   const query = document.getElementById('cityInput').value;
   console.log('Search for:', query);
-  // Add your logic to handle the search (e.g., redirect to a search results page)
 }
-
-
-
-
-
 
 
 // Check screen width for specific functionality
@@ -87,4 +81,34 @@ const clearInput = () => {
 
 const clearBtn = document.getElementById("clear-btn");
 clearBtn.addEventListener("click", clearInput);
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navList = document.querySelector('.navlist');
+  const burger = document.querySelector('.profile-img');
+  const navbar = document.querySelector('.navigation');
+
+  // Function to toggle classes
+  function toggleClasses() {
+      navList.classList.toggle('v-class');
+      navbar.classList.toggle('h-class');
+  }
+
+  // Event listener for each list item
+  navList.querySelectorAll('.list').forEach(function (listItem) {
+      listItem.addEventListener('click', function () {
+          toggleClasses();
+      });
+  });
+
+  // Event listener for burger menu
+  burger.addEventListener('click', function () {
+      toggleClasses();
+  });
+});
+
+
+
 
