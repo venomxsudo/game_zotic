@@ -1,51 +1,223 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900|Montserrat:300,400,500,700,900");
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins' !important;
 }
-body{
-    min-height: 100vh;
+body {
+  min-height: 100vh;
 }
-.slider-box{
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+}
+.w3-left,
+.w3-right{
+    background-color: black;
+    width: 25px;
+    border-radius: 30%;
+}
+.w3-badge {
+  height: 18px;
+  width: 13px;
+  padding: 0;
+}
+.w3-display-container{
+    width: 100% !important;
+    height: 500px !important;
+}
+
+
+.path-navigation {
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* height: 100vh; */
-    height: auto;
+    color: #A0AEC0; /* Set your desired text color */
+    font-size: 0.875rem; /* Set your desired font size */
+    margin-top: 20px;
+  }
+  
+  .path-navigation a {
+    text-decoration: none;
+    color: #A0AEC0; /* Set your desired link color */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .path-navigation a:hover {
+    color: #4299E1; /* Set your desired hover color */
+    text-decoration: underline;
+  }
+  
+  .path-separator {
+    margin: 0 0.5rem; /* Set the desired spacing between the elements */
+  }
+  
+
+.mySlides {
+  display: none;
+  border: 3px solid white;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
 }
-.container-slider{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    border: 6px solid red ;
-    overflow: hidden;
+
+.slider img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 20px;
 }
 .slider{
     display: flex;
+    flex-direction: column;
 }
-.slide{
-    flex: 0 0 100%;
-    height: 250px;
-    background-size: cover;
-    background-position: center;
+.slider h1{
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 10px;
+    margin-top: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
-.slide .active_slide{
-    transform: translateX(0);
+.turf{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    flex-wrap: wrap;
 }
-.slide img{
-    width: 100%;
-    height: 100%; 
+.turf .turf-details{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
-.slider-controls button{
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+.turf-details .book-btn{
+    padding: 10px;
+    margin-top: 20px;
+    width: 90%;
+}
+.book-btn .book-now{
+    background-color: #4eaaec;
+    color: white;
     border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.447);
 }
-.prev,.next{
-    margin: 0 10px;
-    background: black;
-    color: aliceblue;
+.book-btn .book-now:hover{
+    background-color: #4299E1;
 }
+.book-btn .book-now:active{
+    box-shadow: none;
+    transform: translate(3px,3px);
+}
+.turf .row{
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 90%;
+    margin: 10px;
+    margin-left: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.447);
+}
+.row h3{
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+.turf-details .turf-data-normal{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.pricing .price-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.turf-desc-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    margin: 30px;
+    margin-top: 60px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.447);
+}
+.turf-desc-wrapper .turf-desc{
+    padding: 20px;
+}
+.turf-desc h3{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
+    .turf{
+        flex-direction: column;
+    }
+    .slider h1 {
+      font-size: 1.5rem;
+    }
+  
+    .turf .turf-details .book-btn {
+      width: 70%;
+    }
+  
+    .row {
+      width: 80%;
+    }
+    .turf-desc-wrapper{
+        flex-direction: column;
+        width: 90%;
+    }
+  
+    .pricing .price-wrap {
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive styles for tablet screens */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .turf{
+        flex-direction: column;
+        width: 100%;
+    }
+    .slider h1 {
+      font-size: 2rem;
+    }
+    .turf .turf-details{
+        width: 90%;
+    }
+    .turf-details .book-btn {
+      width: 80%;
+    }
+  
+    .row {
+      flex-direction: row;
+    }
+  
+    .turf-details .turf-data-normal {
+      font-size: 1.2rem;
+    }
+  
+    .pricing .price-wrap {
+      flex-direction: row;
+    }
+  }

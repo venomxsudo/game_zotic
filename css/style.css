@@ -27,7 +27,12 @@
   transform: translate(-50%, -50%);
   backdrop-filter: blur(10px);
 }
-
+#error-message {
+  text-align: center;
+  color: red;
+  font-size: 18px;
+  margin-top: 10px;
+}
 .box .login-box {
   width: 100%;
   height: max-content;

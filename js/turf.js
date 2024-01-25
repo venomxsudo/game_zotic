@@ -96,24 +96,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // slider
-const slider = document.querySelectorAll(".slider");
-const slides = document.querySelectorAll(".slide");
-const prevbtn = document.querySelectorAll(".prev");
-const nextbtn = document.querySelectorAll(".next");
-
-let slideIndex = 0;
-slides[slideIndex].classList.add("active_slide");
-prevbtn.addEventListener("click", prevslide);
-nextbtn.addEventListener("click", nextslide);
-function prevslide() {
-  slides[slideIndex].classList.remove("active_slide");
-  slideIndex = (slideIndex ===0) ? slides.length -1 : slideIndex -1;
-  slides[slideIndex].classList.add("active_slide");
-  slider.style.transform=`translateX(-${slideIndex * 100}%)`;
-}
-function nextslide() {
-  slides[slideIndex].classList.remove("active_slide");
-  slideIndex = (slideIndex ===slides.length -1 ) ? 0: slideIndex +1;
-  slides[slideIndex].classList.add("active_slide");
-  slider.style.transform=`translateX(-${slideIndex * 100}%)`;
-}
