@@ -57,20 +57,6 @@ if (screen.width > 1200) {
   list.forEach((item) => item.addEventListener("click", activeLink));
 }
 
-// Change navigation bar color on scroll
-document.addEventListener("DOMContentLoaded", function () {
-  var navbar = document.querySelector(".navigation");
-
-  window.addEventListener("scroll", function () {
-    var scrollPos = window.scrollY;
-
-    if (scrollPos > 400) {
-      navbar.classList.add("alt-color");
-    } else {
-      navbar.classList.remove("alt-color");
-    }
-  });
-});
 
 // search button
 
@@ -92,23 +78,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to toggle classes
   function toggleClasses() {
-      navList.classList.toggle('v-class');
-      navbar.classList.toggle('h-class');
+    navList.classList.toggle('v-class');
+    navbar.classList.toggle('h-class');
   }
 
   // Event listener for each list item
   navList.querySelectorAll('.list').forEach(function (listItem) {
-      listItem.addEventListener('click', function () {
-          toggleClasses();
-      });
+    listItem.addEventListener('click', function () {
+      toggleClasses();
+    });
   });
 
   // Event listener for burger menu
   burger.addEventListener('click', function () {
-      toggleClasses();
+    toggleClasses();
   });
 });
 
+// slider
+const slider = document.querySelectorAll(".slider");
+const slides = document.querySelectorAll(".slide");
+const prevbtn = document.querySelectorAll(".prev");
+const nextbtn = document.querySelectorAll(".next");
 
-
-
+let slideIndex = 0;
+slides[slideIndex].classList.add("active_slide");
+prevbtn.addEventListener("click", prevslide);
+nextbtn.addEventListener("click", nextslide);
+function prevslide() {
+  slides[slideIndex].classList.remove("active_slide");
+  slideIndex = (slideIndex ===0) ? slides.length -1 : slideIndex -1;
+  slides[slideIndex].classList.add("active_slide");
+  slider.style.transform=`translateX(-${slideIndex * 100}%)`;
+}
+function nextslide() {
+  slides[slideIndex].classList.remove("active_slide");
+  slideIndex = (slideIndex ===slides.length -1 ) ? 0: slideIndex +1;
+  slides[slideIndex].classList.add("active_slide");
+  slider.style.transform=`translateX(-${slideIndex * 100}%)`;
+}
