@@ -139,6 +139,10 @@ background: #b9b9b9;
   font-size: 35px;
   margin: 7px 6px;
   margin-left: 10px;
+  text-decoration: none;
+}
+.google-icon:active{
+  color: white;
 }
 
 .btn-text {
