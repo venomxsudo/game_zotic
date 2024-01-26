@@ -26,6 +26,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/img/ball.png" />
 </head>
 <body>
+  <div id="overlay"></div>
     <div class="navigation h-class alt-color">
         <!-- Navigation List -->
         <ul class="v-class navlist">
@@ -133,7 +134,7 @@
         </div>
       </div>
       <div class="book-btn">
-        <button class="book-now">Book Now</button>
+        <button class="book-now" id="openModalBtn">Book Now</button>
       </div>
       </div>
 
@@ -211,6 +212,69 @@
           </p>
         </div>
       </div>
+
+
+
+<!-- POPUP BOOK NOW -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form id="bookingForm">
+      <div class="turf-title">
+        <h1>Power Play Cricket Turf</h1>
+      </div>
+      <div class="dt">
+        <div>
+      <label for="time" class="dt-label">Time </label>
+      <select id="time" name="time">
+        <option value="00:00">00:00</option>
+        <option value="01:00">01:00</option>
+        <option value="02:00">02:00</option>
+        <option value="03:00">03:00</option>
+        <option value="04:00">04:00</option>
+        <option value="05:00">05:00</option>
+        <option value="06:00">06:00</option>
+        <option value="07:00">07:00</option>
+        <option value="08:00">08:00</option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+        <option value="21:00">21:00</option>
+        <option value="22:00">22:00</option>
+        <option value="23:00">23:00</option>
+      </select>
+      </div>
+      <div>
+      <label for="hours" class="dt-label">Hours </label>
+      <select id="hours" name="hours">
+        <option value="1">1 Hour</option>
+        <option value="2">2 Hours</option>
+        <option value="2">3 Hours</option>
+        <option value="4">4 Hours</option>
+        <option value="5">5 Hours</option>
+      </select>
+      </div>
+      </div>
+      <p id="amount"></p>
+      <div class="button-wrapper">
+      <button type="submit">Book Now</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
 </body>
 <script src="/js/turf.js"></script>
 <script>
@@ -240,6 +304,52 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " w3-white";
 }
+
+// POPUP BOOK NOW
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the modal
+  var modal = document.getElementById("bookingModal");
+  var overlay = document.getElementById("overlay");
+  // Get the button that opens the modal
+  var btn = document.getElementById("openModalBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == overlay) {
+      modal.style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+  }
+
+  // Handle form submission
+  var form = document.getElementById("bookingForm");
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    var time = document.getElementById("time").value;
+    var hours = parseInt(document.getElementById("hours").value);
+    var amount = 1000 * hours; // $1000 per hour
+    document.getElementById("amount").innerText = "Amount: ₹" + amount;
+    // Here you can perform further actions like sending the booking details to a server
+    // For this example, just updating the amount is shown
+  });
+});
+
+
 </script>
 <script src="/js/header.js"></script>
 </html>
