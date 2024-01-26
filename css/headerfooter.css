@@ -110,6 +110,7 @@
 
 .links h3 {
   font-size: 25px;
+  font-weight: bold !important;
 }
 
 .links ul {
@@ -132,6 +133,7 @@
 }
 .footer-contact h3{
   font-size: 25px;
+  font-weight: bold !important;
 }
 .footer-contact ul li {
   margin-bottom: 10px;
