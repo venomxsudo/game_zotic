@@ -60,17 +60,18 @@ body {
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
 }
 
-.slider img{
+.turf .slider img{
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     border-radius: 20px;
 }
-.slider{
+.turf .slider{
     display: flex;
     flex-direction: column;
+    margin-top: -128px;
 }
-.slider h1{
+.turf .slider h1{
     font-size: 50px;
     font-weight: 700;
     padding-top: 10px;
@@ -91,12 +92,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 142px;
 }
 .turf-details .book-btn{
-    padding: 10px;
-    margin-top: 20px;
+    /* padding: 10px; */
     width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 .book-btn .book-now{
     background-color: #4eaaec;
