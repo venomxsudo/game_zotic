@@ -173,56 +173,80 @@ body {
 @media only screen and (max-width: 767px) {
     .turf{
         flex-direction: column;
+        padding-top: 20vh;
     }
-    .slider h1 {
-      font-size: 1.5rem;
+    .slider .path-navigation{
+      margin-left: 10px;
+    }
+    .slider .turf-title h1{
+      font-size: 30px;
+      margin-left: 10px;
+    }
+    .w3-display-container{
+        height: 300px !important;
+        width: 99% !important;
     }
   
-    .turf .turf-details .book-btn {
-      width: 70%;
+    .turf .turf-details{
+      width: 100%;
+      margin-top: 10px;
     }
-  
-    .row {
-      width: 80%;
+    .turf-details .row{
+      margin: 10px;
     }
     .turf-desc-wrapper{
         flex-direction: column;
         width: 90%;
     }
+    .turf-desc-wrapper .maps iframe{
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+    }
   
     .pricing .price-wrap {
-      flex-direction: column;
+      flex-direction: row;
     }
   }
   
   /* Responsive styles for tablet screens */
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .turf{
-        flex-direction: column;
-        width: 100%;
-    }
-    .slider h1 {
-      font-size: 2rem;
-    }
-    .turf .turf-details{
-        width: 90%;
-    }
-    .turf-details .book-btn {
-      width: 80%;
-    }
-  
-    .row {
-      flex-direction: row;
-    }
-  
-    .turf-details .turf-data-normal {
-      font-size: 1.2rem;
-    }
-  
-    .pricing .price-wrap {
-      flex-direction: row;
-    }
+      flex-direction: column;
+      padding-top: 30vh;
   }
+  .slider .path-navigation{
+    margin-left: 10px;
+  }
+  .slider .turf-title h1{
+    margin-left: 10px;
+  }
+  .w3-display-container{
+      height: 100% !important;
+      width: 99% !important;
+  }
+
+  .turf .turf-details{
+    width: 90%;
+    margin-top: 10px;
+  }
+  .turf-details .row{
+    margin: 10px;
+  }
+  .turf-desc-wrapper{
+      flex-direction: column;
+      width: 90%;
+  }
+  .turf-desc-wrapper .maps iframe{
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+  }
+
+  .pricing .price-wrap {
+    flex-direction: row;
+  }
+}
 
 #overlay {
   position: fixed;
