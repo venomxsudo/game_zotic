@@ -66,11 +66,11 @@
   object-fit: cover;
 }
 .burger{
-  display: none;
+  display: block;
   position: absolute;
   cursor: pointer;
   right: 3%;
-  top: 20px;
+  /* top: 20px; */
 }
 .line{
   width: 30px;
