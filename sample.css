@@ -1,0 +1,52 @@
+.patterns {
+    height: 100vh;
+}
+
+.text1,
+.text2 {
+    font-family: Lora;
+    letter-spacing: 10px;
+    font-size: 150px;
+    font-weight: 700;
+    stroke-width: 3;
+    /* fill: #fff; */
+}
+
+.text1 {
+    stroke: #ffffff;
+    animation: textAnimate1 5s  alternate;
+}
+
+.text2 {
+    stroke: #ffffff;
+    animation: textAnimate2 5s  alternate;
+}
+
+@keyframes textAnimate1 {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        /* fill: hsla(0, 0%, 0%, 0); */
+        fill: #000;
+    }
+    
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffset: -20%;
+        /* fill: hsl(0, 0%, 100%); */
+    }
+}
+
+@keyframes textAnimate2 {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        /* fill: hsla(0, 0%, 0%, 0); */
+    }
+    
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffset: -20%;
+        /* fill: hsl(0, 0%, 100%); */
+    }
+}
