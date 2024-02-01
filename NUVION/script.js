@@ -25,3 +25,19 @@ btn.addEventListener('click', function () {
 }
 });
 
+
+
+// loader
+document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.getElementById('loader');
+
+    loader.style.display = 'block'; // Show the loader on page load
+
+    // After 2 seconds, hide the loader with smooth fade-out
+    setTimeout(function () {
+        loader.style.opacity = '0';
+        setTimeout(function () {
+            loader.style.display = 'none';
+        }, 500);
+    }, 1000);
+});
