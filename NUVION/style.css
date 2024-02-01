@@ -175,8 +175,17 @@ TEAM
 }
 .teamcard .profile{
   width: 100%;
-  border-radius: 50%;
+  height: 300px;
+  border-radius: 0px 0px 50% 50%;
+  margin-top: -20px;
+  overflow: hidden;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.teamcard img{
+  width: 100%;
   padding: 10px;
+  object-fit: cover;
 }
 .teamcard .name{
   font-size: 25px;
@@ -197,11 +206,14 @@ TEAM
   width: 100%;
   margin: 10px;
 }
-.teamcard:hover{
-  box-shadow: 7px 7px 0px 0px #fff;
-  transform: translate(-7px,-7px);
+.teamcard:hover .profile {
+  filter: grayscale(0%); /* Remove the grayscale effect on hover */
 }
 
+.teamcard:hover {
+  box-shadow: 7px 7px 0px 0px #fff;
+  transform: translate(-7px, -7px);
+}
 
 /*
 --------------------
