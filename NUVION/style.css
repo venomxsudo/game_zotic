@@ -225,52 +225,19 @@ CONTACT US
   letter-spacing: 0.05em;
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 50px;
+  width: 80%;
 }
 
-.contactus .contact-form {
-  width: 80%; /* Adjusted width for responsiveness */
-}
-
-.contactus form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Full width */
-  margin: 10px;
-}
-
-.contactus input,.contactus textarea {
-  outline: none;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 5px;
-  width: 70%;
-  margin: 10px;
-  margin-right: none;
-  transition: all 0.4s ease;
-  border: none;
-  border-bottom: 1px solid;
-  color: #ddd !important;
-  background-color: #222;
-}
-
-.contact-form form button {
-  width: 30%; /* Full width */
-  padding: 10px;
-  margin: 20px 0;
-  background-color: #555d;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-.contact-form form button:hover{
+.contact-btn button{
   background-color: #333;
   color: white;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.contact-btn button:hover{
+  background-color: #222;
 }
 
 
