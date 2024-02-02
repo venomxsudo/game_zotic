@@ -73,6 +73,9 @@ body {
   .vertical-line{
     display: none;
   }
+  #bb{
+    z-index: 0;
+  }
   body{
     overflow-x: hidden !important;
   }
@@ -378,7 +381,7 @@ _________________ */
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
   .footer{
-      width: 80%;
+      width: 100%;
   }
   .footer-row {
     flex-direction: column;
