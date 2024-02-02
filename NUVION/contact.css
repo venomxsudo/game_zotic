@@ -273,6 +273,17 @@ _______________________
       flex-direction: column;
       /* align-items: center; */
     }
+    .footer-company{
+      text-align: justify !important;
+      text-justify: inter-word !important;
+    }
+    .copyright{
+      width: 100%;
+      margin: auto;
+    }
+    .extra{
+      gap: 10px;
+    }
   
     .footer-company,
     .links,
@@ -289,4 +300,12 @@ _______________________
       margin: auto;
       margin-bottom: 30px;
     }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .checkboxs{
+      flex-direction: row;
+      align-items: center;
+    }
+    
   }
