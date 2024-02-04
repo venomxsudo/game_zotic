@@ -60,11 +60,11 @@ body{
   .profile-details .data {
     display: flex;
     justify-content: space-between;
-    margin: 10px auto;
+    margin:10px auto;
     padding: 10px;
-    padding-left: 20px;
+    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     width: 70%;
     background-color: rgba(135, 207, 235, 0.307);
     border: 1.5px solid #333;
@@ -73,6 +73,9 @@ body{
     .profile-details span{
     margin-left: 10px;
     font-weight: bold;
+    width: 75%;
+    font-size: 25px;
+    text-align: left;
   }
   .no-pad{
     padding-top: 0px;
@@ -160,12 +163,13 @@ body{
     .profile-details .data {
       width: 100%;
       padding: 10px;
-      font-size: 16px; /* Adjusted font size for smaller screens */
+      font-size: 13px; /* Adjusted font size for smaller screens */
     }
   
     .profile-details span {
       margin-left: 5px; /* Adjusted margin for smaller screens */
       font-weight: bold;
+      font-size: 15px;
     }
   
     .profile .buttons {
