@@ -120,9 +120,9 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     margin: 20px auto;
-    width: 70%;
+    width: 374px;
   }
   input[type="checkbox"]{
     width: 20px;
@@ -290,6 +290,9 @@ _______________________
     .footer-contact {
       margin-bottom: 20px;
     }
+    .checkboxs{
+      padding: 10px;
+    }
   }
   
   
@@ -304,8 +307,8 @@ _______________________
 
   @media screen and (max-width: 1200px) {
     .checkboxs{
-      flex-direction: row;
       align-items: center;
+      
     }
     
   }

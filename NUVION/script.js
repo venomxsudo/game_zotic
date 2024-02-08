@@ -41,3 +41,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 500);
     }, 1000);
 });
+
+function load_loader(){
+    const loader = document.getElementById('loader');
+    
+    loader.style.display = 'block';
+    loader.style.opacity = '1';
+    setTimeout(function () {
+        loader.style.opacity = '0';
+        setTimeout(function () {
+            loader.style.display = 'none';
+            window.location.href='contact.html'
+        }, 500);
+    }, 1000);
+}

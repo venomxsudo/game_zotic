@@ -18,12 +18,12 @@
 .navigation ul li {
   position: relative;
   list-style: none;
-  width: 170px;
+  width: auto;
   height: 50px;
   z-index: 1;
   display: flex;
 }
-.navigation ul li a {
+.navigation ul li span {
   position: relative;
   display: flex;
   justify-content: center;
@@ -34,17 +34,11 @@
   font-weight: 500;
   text-decoration: none;
 }
-.navigation ul li a:hover {
-  cursor: pointer;
-}
-.navigation ul li a .text {
-  font-size: 20px;
+.navigation ul li .text {
+  font-size: 30px;
   letter-spacing: 0.05em;
   font-weight: 900;
   transition: all 0.5s ease;
-  color: #fff;
-}
-.navigation ul .active a .text{
   color: #333;
 }
 .alt-color{
